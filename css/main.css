@@ -1,0 +1,43 @@
+body {
+	/* Background pattern from Toptal Subtle Patterns */
+	background-image: url(../img/wood_1.png);
+	margin: 0px;
+}
+
+.container {
+	background-color: white;
+	width: 900px;
+	height: 500px;
+	margin: auto;
+}
+
+.logo {
+	background-color: grey;
+	width: 900px;
+	height: 60px;
+}
+
+.menu {
+	background-color: black;
+	width: 900px;
+	height: 40px;
+}
+
+.logowanie {
+	background-color: white;
+	width: 100px;
+	height: 60px;
+	float: right;
+}
+
+
+
+.kurs
+{
+	display: inline-block;
+	width: 400px;
+	background-color: white;
+	margin: 0 20px;
+	border: 1px solid brown;
+	opacity: 1;
+}
