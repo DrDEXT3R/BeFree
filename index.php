@@ -14,7 +14,7 @@
 		<div class="container">
 			<div class="logo">
 			
-				Freenalce jobs _____________________log_in__sign up
+				beFree
 				<!-- <button type="button">Click Me!</button> -->
 				
 				<div class=logowanie>Log in</div>
@@ -31,7 +31,7 @@
 				echo "$forename, Hello World";
 			?>
 			
-			<form>
+			<form action="logIn.php" method="post">
 				Login <br/><input type="text" name="login"/><br/><br/>
 				Password <br/><input type="password" name="password"/><br/><br/>
 				<input type="submit" value="Log in"/>
