@@ -16,16 +16,18 @@
 			<div class="logo">
 				beFree
 				<button onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:100px;">Log in</button>
+				<button onclick="location.href='signup.php';" type="submit">Sign up</button>
 				<div id="modal-wrapper" class="modal">
-				  <form class="modal-content animate" action="logIn.php" method="post">  
-					<div class="popUpContainer">
-					  <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
-						<img src="img/avatar.jpg" alt="Avatar" class="avatar">
-					  <input type="text" placeholder="Enter login" name="login">
-					  <input type="password" placeholder="Enter password" name="password">        
-					  <button class="popUpLogIn" type="submit">Log in</button>
-					</div>
-				  </form>
+					<form class="modal-content animate" action="logIn.php" method="post">  
+						<div class="popUpContainer">
+							<span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+							<img src="img/avatar.jpg" alt="Avatar" class="avatar">
+							<input class="popUpInput" type="text" placeholder="Enter login" name="login">
+							<input class="popUpInput" type="password" placeholder="Enter password" name="password">
+							<button class="popUpLogInButton" type="submit">Log in</button>
+							<a href="signup.php">Create account</a>
+						</div>
+					</form>
 				</div>
 			</div>
 			<div class="menu"></div>			
