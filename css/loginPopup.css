@@ -1,4 +1,4 @@
-/* Full-width input fields */
+/* Set a style for input fields in pop-up */
 .popUpInput {
     width: 90%;
     padding: 12px 20px;
@@ -9,6 +9,7 @@
 	font-size:16px;
 }
 
+/* Set a style for button in pop-up */
 button {
     background-color: #4CAF50;
     color: white;
@@ -34,7 +35,6 @@ button:hover {
 	font-size:20px;
 }
 
-/* Center the image and position the close button */
 .popUpContainer {
     text-align: center;
     margin: 12px 0 12px 0;
@@ -46,8 +46,8 @@ button:hover {
 	border-radius: 50%;
 }
 
-/* The Modal (background) */
-.modal {
+/* Darken background */
+.background {
 	display:none;
     position: fixed;
     z-index: 1;
@@ -59,13 +59,12 @@ button:hover {
     background-color: rgba(0,0,0,0.4);
 }
 
-/* Modal Content Box */
-.modal-content {
+/* Pop-up content */
+.popUpContent {
     background-color: #fefefe;
     margin: 4% auto 15% auto;
     border: 1px solid #888;
     width: 25%; 
-
 }
 
 /* The Close Button (x) */

@@ -17,8 +17,8 @@
 				beFree
 				<button onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:100px;">Log in</button>
 				<button onclick="location.href='signup.php';" type="submit">Sign up</button>
-				<div id="modal-wrapper" class="modal">
-					<form class="modal-content animate" action="logIn.php" method="post">  
+				<div id="modal-wrapper" class="background">
+					<form class="popUpContent animate" action="logIn.php" method="post">  
 						<div class="popUpContainer">
 							<span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
 							<img src="img/avatar.jpg" alt="Avatar" class="avatar">
@@ -32,7 +32,7 @@
 			</div>
 			<div class="menu"></div>			
 			<a href="employer.html" class="button button1">
-				<div class="kurs">
+				<div class="option">
 					<div class="test"></div>
 					<h1>przycisk1</h1>
 					<p>opis1</p>
@@ -40,7 +40,7 @@
 				</div>
 			</a>
 			<a href="freelancer.html" class="button button1">
-				<div class="kurs">
+				<div class="option">
 					<h1>przycisk2</h1>
 					<p>opis2</p>
 					Szukasz zleceń
