@@ -1,3 +1,14 @@
+<?php
+	
+	session_start();
+	
+	if( (isset($_SESSION['loggedIn'])) && ($_SESSION['loggedIn']==true) ) {
+		header('Location: action.php');
+		exit();
+	}
+	
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -9,7 +20,7 @@
 		<meta http-equiv="X-Ua-Compatible" content="IE-edge,chrome=1">
 		<link rel="stylesheet" href="css/main.css">	
 		<link rel="stylesheet" href="css/loginPopUp.css">	
-		<script src="code.js"></script>
+		<script src="code.js"></script>	
 	</head>
 	<body>
 		<div class="container">
@@ -18,7 +29,7 @@
 				<button onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:100px;">Log in</button>
 				<button onclick="location.href='signup.php';" type="submit">Sign up</button>
 				<div id="modal-wrapper" class="background">
-					<form class="popUpContent animate" action="logIn.php" method="post">  
+					<form class="popUpContent animate" action="action.php" method="post">  
 						<div class="popUpContainer">
 							<span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
 							<img src="img/avatar.jpg" alt="Avatar" class="avatar">
@@ -28,6 +39,12 @@
 							<a href="signup.php">Create account</a>
 						</div>
 					</form>
+					
+					<?php
+						//if( isset($_SESSION['error'] )
+							//echo $_SESSION['error'];
+					?>
+					
 				</div>
 			</div>
 			<div class="menu"></div>			

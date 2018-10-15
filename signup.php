@@ -37,6 +37,8 @@
 			$_SESSION['e_password']="Both passwords are not matching!";
 		}
 		
+		$password_hash=password_hash($password1,PASSWORD_DEFAULT);
+		echo $password_hash; exit();
 		
 		//Everything OK
 		if($succVal==true) {
