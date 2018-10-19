@@ -1,3 +1,13 @@
+<?php
+	
+	session_start();
+	
+	if( (isset($_SESSION['loggedIn'])) && ($_SESSION['loggedIn']==true) ) {
+		header('Location: action.php');
+		exit();
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -18,7 +28,7 @@
 				<button onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:100px;">Log in</button>
 				<button onclick="location.href='signup.php';" type="submit">Sign up</button>
 				<div id="modal-wrapper" class="background">
-					<form class="popUpContent animate" action="logIn.php" method="post">  
+					<form class="popUpContent animate" action="login.php" method="post">  
 						<div class="popUpContainer">
 							<span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
 							<img src="img/avatar.jpg" alt="Avatar" class="avatar">
@@ -26,8 +36,17 @@
 							<input class="popUpInput" type="password" placeholder="Enter password" name="password">
 							<button class="popUpLogInButton" type="submit">Log in</button>
 							<a href="signup.php">Create account</a>
+							
+							<?php
+							//add automatically pop-up
+								if( isset($_SESSION['error']) ) {
+									echo "</br>".$_SESSION['error']."</br>";
+								}
+							?>
+
 						</div>
 					</form>
+
 				</div>
 			</div>
 			<div class="menu"></div>			
