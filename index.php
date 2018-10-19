@@ -6,6 +6,7 @@
 		header('Location: action.php');
 		exit();
 	}
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@
 		<meta http-equiv="X-Ua-Compatible" content="IE-edge,chrome=1">
 		<link rel="stylesheet" href="css/main.css">	
 		<link rel="stylesheet" href="css/loginPopUp.css">	
-		<script src="code.js"></script>
+		<script src="code.js"></script>	
 	</head>
 	<body>
 		<div class="container">
@@ -46,7 +47,6 @@
 
 						</div>
 					</form>
-
 				</div>
 			</div>
 			<div class="menu"></div>			
