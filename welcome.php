@@ -2,7 +2,7 @@
 	
 	session_start();
 	
-	if( !isset($_SESSION['succRegistration']) ) {
+	if (!isset($_SESSION['succRegistration'])) {
 		header('Location: index.php');
 		exit();
 	}
@@ -11,18 +11,18 @@
 	}
 	
 	//Removing variables used for saving the entered data in the registration form
-	if( isset($_SESSION['fr_login']) )		unset($_SESSION['fr_login']);
-	if( isset($_SESSION['fr_email']) )		unset($_SESSION['fr_email']);
-	if( isset($_SESSION['fr_password1']) )	unset($_SESSION['fr_password1']);
-	if( isset($_SESSION['fr_password2']) )	unset($_SESSION['fr_password2']);
-	if( isset($_SESSION['fr_rules']) )		unset($_SESSION['fr_rules']);
+	if (isset($_SESSION['fr_login']))		unset($_SESSION['fr_login']);
+	if (isset($_SESSION['fr_email']))		unset($_SESSION['fr_email']);
+	if (isset($_SESSION['fr_password1']))	unset($_SESSION['fr_password1']);
+	if (isset($_SESSION['fr_password2']))	unset($_SESSION['fr_password2']);
+	if (isset($_SESSION['fr_rules']))		unset($_SESSION['fr_rules']);
 	
 	//Removing registration errors
-	if( isset($_SESSION['e_login']) )		unset($_SESSION['e_login']);
-	if( isset($_SESSION['e_email']) )		unset($_SESSION['e_email']);
-	if( isset($_SESSION['e_password']) )	unset($_SESSION['fr_password']);
-	if( isset($_SESSION['e_rules']) )		unset($_SESSION['e_rules']);
-	if( isset($_SESSION['e_bot']) )			unset($_SESSION['e_bot']);
+	if (isset($_SESSION['e_login']))		unset($_SESSION['e_login']);
+	if (isset($_SESSION['e_email']))		unset($_SESSION['e_email']);
+	if (isset($_SESSION['e_password']))		unset($_SESSION['fr_password']);
+	if (isset($_SESSION['e_rules']))		unset($_SESSION['e_rules']);
+	if (isset($_SESSION['e_bot']))			unset($_SESSION['e_bot']);
 
 ?>
 
@@ -58,7 +58,7 @@
 							
 							<?php
 							//add automatically pop-up
-								if( isset($_SESSION['error']) ) {
+								if (isset($_SESSION['error'])) {
 									echo "</br>".$_SESSION['error']."</br>";
 								}
 							?>

@@ -2,7 +2,7 @@
 	
 	session_start();
 	
-	if( (isset($_SESSION['loggedIn'])) && ($_SESSION['loggedIn']==true) ) {
+	if ((isset($_SESSION['loggedIn'])) && ($_SESSION['loggedIn']==true)) {
 		header('Location: action.php');
 		exit();
 	}
@@ -36,21 +36,19 @@
 							<input class="popUpInput" type="text" placeholder="Enter login" name="login">
 							<input class="popUpInput" type="password" placeholder="Enter password" name="password">
 							<button class="popUpLogInButton" type="submit">Log in</button>
-							<a href="signup.php">Create account</a>
-							
+							<a href="signup.php">Create account</a>	
 							<?php
-							//add automatically pop-up
-								if( isset($_SESSION['error']) ) {
+								if (isset($_SESSION['error'])) {
 									echo "</br>".$_SESSION['error']."</br>";
+									echo '<script>var modal = document.getElementById("modal-wrapper");window.onload = function(){modal.style.display="block";}</script>';
 								}
 							?>
-
 						</div>
 					</form>
 				</div>
 			</div>
 			<div class="menu"></div>			
-			<a href="employer.html" class="button button1">
+			<a href="employer.php" class="button button1">
 				<div class="option">
 					<div class="test"></div>
 					<h1>przycisk1</h1>
@@ -58,7 +56,7 @@
 					Szukasz zleceń
 				</div>
 			</a>
-			<a href="freelancer.html" class="button button1">
+			<a href="freelancer.php" class="button button1">
 				<div class="option">
 					<h1>przycisk2</h1>
 					<p>opis2</p>

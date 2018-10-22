@@ -3,7 +3,7 @@
 	session_start();
 	
 	//this if is needed when something has to be seen only for logged in users
-	if( (!isset($_SESSION['loggedIn'])) ) {
+	if ((!isset($_SESSION['loggedIn']))) {
 		header('Location: index.php');
 		exit();
 	}
