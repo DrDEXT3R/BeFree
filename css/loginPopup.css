@@ -9,30 +9,19 @@
 	font-size:16px;
 }
 
-/* Set a style for button in pop-up */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 8px;
-    border: none;
-    cursor: pointer;
-    width: 15%;
-	font-size:20px;
-}
-button:hover {
-    opacity: 0.8;
-}
-
 .popUpLogInButton {
-	background-color: #4CAF50;
+	background-color: rgb(25,139,210);
     color: white;
-    padding: 14px 20px;
+    padding: 8px 20px;
     margin: 8px 8px;
     border: none;
     cursor: pointer;
     width: 90%;
-	font-size:20px;
+	font-size: 30px;
+	font-family: 'Amatic SC', cursive;
+}
+.popUpLogInButton:hover {
+    opacity: 0.8;
 }
 
 .popUpContainer {
