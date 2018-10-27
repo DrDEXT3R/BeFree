@@ -20,7 +20,7 @@
 	//Removing registration errors
 	if (isset($_SESSION['e_login']))		unset($_SESSION['e_login']);
 	if (isset($_SESSION['e_email']))		unset($_SESSION['e_email']);
-	if (isset($_SESSION['e_password']))		unset($_SESSION['fr_password']);
+	if (isset($_SESSION['e_password']))		unset($_SESSION['e_password']);
 	if (isset($_SESSION['e_rules']))		unset($_SESSION['e_rules']);
 	if (isset($_SESSION['e_bot']))			unset($_SESSION['e_bot']);
 

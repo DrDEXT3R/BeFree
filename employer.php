@@ -6,15 +6,11 @@
 		//assumption: successful validation
 		$succVal=true;
 		
-		//check login
-		$login=$_POST['login'];
-		if ((strlen($login)<3) || (strlen($login)>20)) {
+		//check employer
+		$employer=$_POST['employer'];
+		if ((strlen($employer)<1) || (strlen($employer)>20)) {
 			$succVal=false;
-			$_SESSION['e_login']="Login must be at least 3 and up to 20 characters long!";
-		}
-		if (ctype_alnum($login)==false) {
-			$succVal=false;
-			$_SESSION['e_login']="Login must contain only letters and numbers!";
+			$_SESSION['e_employer']="Employer must be at least 1 and up to 20 characters long!";
 		}
 		
 		//check e-mail
@@ -25,42 +21,57 @@
 			$_SESSION['e_email']="Please insert a valid email address!";
 		}
 		
-		//check password
-		$password1=$_POST['password1'];
-		$password2=$_POST['password2'];
-		if ((strlen($password1)<8) || (strlen($password1)>20)) {
+		//check technique
+		$technique=$_POST['technique'];
+		if ((strlen($technique)<1) || (strlen($technique)>20)) {
 			$succVal=false;
-			$_SESSION['e_password']="Password must be at least 8 and up to 20 characters long!";
-		}
-		if ($password1!=$password2) {
-			$succVal=false;
-			$_SESSION['e_password']="Both passwords are not matching!";
+			$_SESSION['e_technique']="Technique must be at least 1 and up to 20 characters long!";
 		}
 		
-		$password_hash=password_hash($password1,PASSWORD_DEFAULT);
-		
-		//checkbox 
-		if (!isset($_POST['rules'])) {
+		//check description
+		$description=$_POST['description'];
+		if (strlen($description)<1) {
 			$succVal=false;
-			$_SESSION['e_rules']="Accept rules!";
+			$_SESSION['e_description']="Description cannot be blank!";
 		}
 		
-		//Bot or not
-		$secret = "6LeK63QUAAAAAFG4ZQ9mkBxWL3PSSaWaFOBpXCB2";
-		$check = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
-		$answer = json_decode($check);
-		if ($answer->success==false) {
+		//check location
+		$location=$_POST['location'];
+		if (strlen($location)<1) {
 			$succVal=false;
-			$_SESSION['e_bot']="Please confirm you are not a robot!";
+			$_SESSION['e_location']="Location cannot be blank!";
+		}
+		
+		//check phone number
+		$phone=$_POST['phone'];
+		if (strlen($phone)!=9) {
+			$succVal=false;
+			$_SESSION['e_phone']="Phone number must be 9 digits!";
+		}
+		if (!(ctype_digit($phone))) {
+			$succVal=false;
+			$_SESSION['e_phone']="Phone number must contain only digits!";
+		}
+		
+		//check price
+		$price=$_POST['price'];
+		if (strlen($price)<1) {
+			$succVal=false;
+			$_SESSION['e_price']="Price cannot be blank!";
+		}
+		if (!(ctype_digit($price))) {
+			$succVal=false;
+			$_SESSION['e_price']="Price must contain only digits!";
 		}
 		
 		//Remember the entered data
-		$_SESSION['fr_login'] = $login;
+		$_SESSION['fr_employer'] = $employer;
 		$_SESSION['fr_email'] = $email;
-		$_SESSION['fr_password1'] = $password1;
-		$_SESSION['fr_password2'] = $password2;
-		if (isset($_POST['rules']))		
-			$_SESSION['fr_rules'] = true;
+		$_SESSION['fr_technique'] = $technique;
+		$_SESSION['fr_description'] = $description;
+		$_SESSION['fr_location'] = $location;
+		$_SESSION['fr_phone'] = $phone;
+		$_SESSION['fr_price'] = $price;
 
 		
 		require_once "connect.php";
@@ -71,28 +82,11 @@
 				throw new Exception(mysqli_connect_errno());
 			}
 			else {
-				//check if email exists
-				$result = $connection->query("SELECT id FROM accounts WHERE email='$email'");
-				if (!$result) 	throw new Exception($connection->error);
-				$noOfTheseEmails = $result->num_rows;
-				if ($noOfTheseEmails>0) {
-					$succVal=false;
-					$_SESSION['e_email']="That email address is already in use!";
-				}
-				//check if login exists
-				$result = $connection->query("SELECT id FROM accounts WHERE login='$login'");
-				if (!$result) 	throw new Exception($connection->error);
-				$noOfTheseLogins = $result->num_rows;
-				if ($noOfTheseLogins>0) {
-					$succVal=false;
-					$_SESSION['e_login']="That login is already in use!";
-				}
-				
 				//Everything OK
 				if ($succVal==true) {
-					if( $connection->query("INSERT INTO accounts VALUES(NULL,'$login','$password_hash','$email')") ) {
+					if( $connection->query("INSERT INTO jobs VALUES(NULL,'$price','$phone','$email','$technique','$employer','$description','$location',20120618)") ) {
 						$_SESSION['succRegistration'] = true;
-						header('Location: welcome.php');
+						header('Location: added.php');
 					}
 					else {
 						throw new Exception($connection->error);
@@ -209,14 +203,14 @@
 						echo $_SESSION['fr_price'];
 						unset($_SESSION['fr_price']);
 					}
-				?>" name="price"/><br/>
+				?>" name="price"/>$<br/>
 				<?php
 					if (isset($_SESSION['e_price'])) {
 						echo '<div class="error">'.$_SESSION['e_price'].'</div>';
 						unset($_SESSION['e_price']);
 					}
 				?>
-				<input type="submit" value="Add offer"/></br>
+				<input type="submit" value="Add announcement"/></br>
 			</form>
 			
 			
