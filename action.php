@@ -28,7 +28,7 @@
 			<div class="logo">
 				beFree
 				<?php
-					echo "<p>Witaj ".$_SESSION['login'].'![<a href="logout.php">Log out</a>]</p>';
+					echo "<p>Welcome ".$_SESSION['login'].'![<a href="logout.php">Log out</a>]</p>';				
 				?>
 			</div>
 			<div class="menu"></div>			

@@ -36,6 +36,17 @@
 					else {				
 						if ($result = $connection->query(sprintf("SELECT * FROM jobs"))) {						
 							while ($row = $result->fetch_assoc()) {
+								
+								//format date
+								$date = $row['date'];
+								$day = date("j",strtotime($date));
+								$month = date("M",strtotime($date));
+								$year = date("Y",strtotime($date));
+								$hour = date("H",strtotime($date));
+								$min = date("i",strtotime($date));
+								$formattedDate = $day.' '.$month.' '.$year.' &nbsp;&nbsp;'.$hour.':'.$min;
+								
+								
 								echo '<div>
 									
 										 Renumeration: '.$row['price'].' $</br>
@@ -45,7 +56,7 @@
 										 Employer: '.$row['employer'].'</br>
 										 Description: '.$row['description'].'</br>
 										 Location: '.$row['location'].'</br>
-										 Date: '.$row['date'].'</br></br>
+										 Date: '.$formattedDate.'</br></br>
 								
 								</div>';
 							}

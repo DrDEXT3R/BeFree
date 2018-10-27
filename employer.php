@@ -84,7 +84,7 @@
 			else {
 				//Everything OK
 				if ($succVal==true) {
-					if( $connection->query("INSERT INTO jobs VALUES(NULL,'$price','$phone','$email','$technique','$employer','$description','$location',20120618)") ) {
+					if( $connection->query("INSERT INTO jobs VALUES(NULL,'$price','$phone','$email','$technique','$employer','$description','$location',now())") ) {
 						$_SESSION['succRegistration'] = true;
 						header('Location: added.php');
 					}
