@@ -1,14 +1,3 @@
-<?php
-	
-	session_start();
-	
-	if ((isset($_SESSION['loggedIn'])) && ($_SESSION['loggedIn']==true)) {
-		header('Location: action.php');
-		exit();
-	}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -21,7 +10,7 @@
 		<meta http-equiv="X-Ua-Compatible" content="IE-edge,chrome=1">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css">	
-		<link rel="stylesheet" href="css/navbar.css">	
+		<link rel="stylesheet" href="css/navbar.css">
 		<link rel="stylesheet" href="css/loginPopUp.css">	
 		<script src="code.js"></script>	
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
@@ -45,7 +34,7 @@
 			</nav>	
 		</header>
 		
-		
+		How it works?
 	
 	
 		
