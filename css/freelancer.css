@@ -1,0 +1,76 @@
+
+.container {
+	/*width: 75%;*/
+	height: 600px;
+	background-color: rgb(25,139,210);
+	/*opacity: 0.5;*/
+	padding: 0;
+}
+
+.offer {
+	background-color: white;
+}
+
+.image {
+	/*width: 20%;*/
+	clear: both;
+	height: 150px;
+	background-color: red;
+}
+
+.basicInfo {
+	/*width: 150px;*/
+	height: 150px;
+	background-color: green;
+
+}
+
+
+.block {
+	
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+.technique {
+	/*width: 60%;*/
+	float: left;
+	background-color: teal;
+}
+
+.date {
+	/*width: 20%;*/
+	float: left;
+	background-color: yellow;
+}
+
+.employer {
+	/*width: 80%;*/
+	float: left;
+	background-color: purple;
+}
+
+.location {
+	float: left;
+	background-color: coral;
+}
+
+.description {
+	float: left;
+	background-color: Navy;
+}
+
+.divider {
+	margin: 0;
+	padding: 0;
+	height: 20px;
+	background-color: white;
+	clear: both;
+}
+
+
+
+
+
+

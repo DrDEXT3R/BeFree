@@ -15,7 +15,7 @@
 		<script src="code.js"></script>	
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
 	</head>
-	<body>
+	<body background="tla/2.png">
 		<header>
 			<nav class="navbar navbar-default navbar-expand-lg">
 				<a class="navbar-brand" href="index.php"><img src="img/logo.png" class="d-inline-block mr-1" alt=""> BeFree</a>
@@ -38,14 +38,7 @@
 	
 	
 		
-		<div class="content">
-			<div class="option1">
-				<a href="freelancer.php">I want to WORK</a>
-			</div>	
-			<div class="option2">
-				<a href="employer.php">I want to HIRE</a>
-			</div>
-		</div>
+
 		<div id="modal-wrapper" class="background">
 			<form class="popUpContent animate" action="login.php" method="post">  
 				<div class="popUpContainer">
