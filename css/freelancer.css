@@ -1,27 +1,46 @@
 
 .container {
 	/*width: 75%;*/
-	height: 600px;
+	/*height: 600px;*/
 	background-color: rgb(25,139,210);
 	/*opacity: 0.5;*/
-	padding: 0;
+	padding: 10px;
+	font-size: 22px;
+	font-family: 'Amatic SC', cursive;	
+	font-weight: bold;
+	color: black;
+
 }
 
 .offer {
-	background-color: white;
+	background-image: url("../tla/2.png");
+
 }
 
 .image {
 	/*width: 20%;*/
+	/*width: 130px;*/
+
+	
+	border-radius: 15px 50px;
 	clear: both;
-	height: 150px;
-	background-color: red;
+
+	/*background-color: red;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	
+}
+
+.image img {
+    width: 100%;
+	height: auto;
+	
 }
 
 .basicInfo {
 	/*width: 150px;*/
-	height: 150px;
-	background-color: green;
+	font-size: 30px;
 
 }
 
@@ -36,29 +55,42 @@
 .technique {
 	/*width: 60%;*/
 	float: left;
-	background-color: teal;
+	text-align: center;
+	min-height: 55px;
+	font-size: 30px;
 }
 
 .date {
 	/*width: 20%;*/
 	float: left;
-	background-color: yellow;
+	text-align: right;
+	font-size: 25px;
+
 }
 
 .employer {
 	/*width: 80%;*/
 	float: left;
-	background-color: purple;
+	font-size: 40px;
+	text-align: center;
+	font-weight: bold;
+	font-family: 'Permanent Marker';
+	min-height: 65px;
 }
 
 .location {
 	float: left;
-	background-color: coral;
+	text-align: center;
+	min-height: 55px;
+	font-size: 30px;
 }
 
 .description {
 	float: left;
-	background-color: Navy;
+	text-align: center;
+}
+.description a {
+	font-size: 30px;
 }
 
 .divider {
@@ -69,6 +101,7 @@
 	clear: both;
 }
 
+/* Background pattern from Toptal Subtle Patterns */
 
 
 

@@ -68,38 +68,44 @@
 									
 									echo '<div class="offer">
 									
-											<div class="block col-4 col-md-3">
-												<div class="image"> png</div>		
+											<div class="block col-12 col-md-3">
+												<div class="image"> 
+													<img src="img/no_image.png" alt="img">
+												</div>		
 												<div class="basicInfo"> 
-													Renumeration:</br>'.$row['price'].' $</br> 
-													Phone number:</br>'.$row['phone'].'</br>
-													E-mail:</br>'.$row['email'].'</br>
+													<img src="img/money.png"> Renumeration: <font color="#198BD2">'.$row['price'].'$</font> </br> 
+													<img src="img/phone.png"> Phone: <font color="#198BD2">'.$row['phone'].'</font> </br>
+													<img src="img/email.png"> E-mail: <font color="#198BD2">'.$row['email'].'</font> </br>
 												</div>
 											</div>
 											
-											<div class="date col-8 col-md-9">
-												Date: '.$formattedDate.'
+											<div class="date col-12 col-md-9">
+												'.$formattedDate.'
 											</div>
 											
-											<div class="technique col-8 col-md-9">
-												Technique: '.$row['technique'].'</br> 
-											</div>
-											
-											<div class="employer col-8 col-md-9"> 
-												Employer: '.$row['employer'].'</br>
+											<div class="employer col-12 col-md-9"> 
+												> '.$row['employer'].' < </br>
 											</div> 
 											
-											<div class="location col-8 col-md-9"> 
-												Location: '.$row['location'].'</br>
+											<div class="technique col-12 col-md-4">
+												<img src="img/tools.png"> Technique: <font color="#198BD2">'.$row['technique'].'</font></br> 
 											</div>
 											
-											<div class="description col-8 col-md-9"> 
-												Description: '.$row['description'].'</br>
+											
+											
+											<div class="location col-12 col-md-4"> 
+												<img src="img/location.png"> Location: <font color="#198BD2">'.$row['location'].'</font></br>
 											</div>
 											
-											<div class="divider col-12"></div>		
+											<div class="description col-12 col-md-9"> 
+												<img src="img/description.png"> <a>Description:</a></br>'.$row['description'].'</br>
+											</div>
 											
-									</div>';
+											
+											
+											<div class="divider col-12"></div>	
+										</div>';
+									
 								}
 							}
 							else {
