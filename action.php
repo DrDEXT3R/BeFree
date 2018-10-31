@@ -26,27 +26,10 @@
 	<body>
 		<div class="container">
 			<div class="logo">
-				beFree
 				<?php
-					echo "<p>Welcome ".$_SESSION['login'].'![<a href="logout.php">Log out</a>]</p>';				
+					echo "<p>Welcome ".$_SESSION['login'].'![<a href="log-out.php">Log out</a>]</p>';				
 				?>
-			</div>
-			<div class="menu"></div>			
-			<a href="employer.html" class="button button1">
-				<div class="option">
-					<div class="test"></div>
-					<h1>przycisk1</h1>
-					<p>opis1</p>
-					Szukasz zleceń
-				</div>
-			</a>
-			<a href="freelancer.html" class="button button1">
-				<div class="option">
-					<h1>przycisk2</h1>
-					<p>opis2</p>
-					Szukasz zleceń
-				</div>	
-			</a>
+			</div>		
 		</div>
 	</body>
 </html>

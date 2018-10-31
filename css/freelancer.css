@@ -1,59 +1,44 @@
-
-.container {
-	/*width: 75%;*/
-	/*height: 600px;*/
-	background-color: rgb(25,139,210);
-	/*opacity: 0.5;*/
-	padding: 10px;
+.containerFreelancer {
+	padding: 0px;
 	font-size: 22px;
 	font-family: 'Amatic SC', cursive;	
 	font-weight: bold;
 	color: black;
-
+	background: none;
 }
 
 .offer {
-	background-image: url("../tla/2.png");
-
+	background-image: url("../img/foreground.png");
+	float: right;
+	border: 10px solid rgb(25,139,210);
+}
+.offer font {
+	color: rgb(25,139,210);
 }
 
 .image {
-	/*width: 20%;*/
-	/*width: 130px;*/
-
-	
 	border-radius: 15px 50px;
 	clear: both;
-
-	/*background-color: red;*/
     display: block;
     margin-left: auto;
     margin-right: auto;
-	
 }
-
 .image img {
     width: 100%;
 	height: auto;
-	
 }
 
 .basicInfo {
-	/*width: 150px;*/
 	font-size: 30px;
-
 }
 
-
 .block {
-	
 	margin: 0;
 	padding: 0;
 	float: left;
 }
 
 .technique {
-	/*width: 60%;*/
 	float: left;
 	text-align: center;
 	min-height: 55px;
@@ -61,15 +46,12 @@
 }
 
 .date {
-	/*width: 20%;*/
 	float: left;
 	text-align: right;
 	font-size: 25px;
-
 }
 
 .employer {
-	/*width: 80%;*/
 	float: left;
 	font-size: 40px;
 	text-align: center;
@@ -96,14 +78,10 @@
 .divider {
 	margin: 0;
 	padding: 0;
-	height: 20px;
-	background-color: white;
+	height: 50px;
 	clear: both;
+	overflow: hidden;
 }
 
+
 /* Background pattern from Toptal Subtle Patterns */
-
-
-
-
-

@@ -35,11 +35,11 @@
 				</button>
 				<div class="collapse navbar-collapse" id="mainmenu">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="howitworks.php">&ensp; How it works? &ensp;</a></li>
-						<li class="nav-item active"><a class="nav-link" href="aboutus.php">&ensp; About us &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="how-it-works.php">&ensp; How it works? &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="about-us.php">&ensp; About us &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="contact.php">&ensp; Contact &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="#" onclick="document.getElementById('modal-wrapper').style.display='block'">&ensp; Log in &ensp;</a></li>
-						<li class="nav-item active"><a class="nav-link" href="signup.php">&ensp; Sign up &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="sign-up.php">&ensp; Sign up &ensp;</a></li>
 					</ul>
 				</div>
 			</nav>	
@@ -58,14 +58,14 @@
 			</div>
 		</div>
 		<div id="modal-wrapper" class="background">
-			<form class="popUpContent animate" action="login.php" method="post">  
+			<form class="popUpContent animate" action="log-in.php" method="post">  
 				<div class="popUpContainer">
 					<span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
 					<img src="img/avatar.png" alt="Avatar" class="avatar">
 					<input class="popUpInput" type="text" placeholder="Enter login" name="login">
 					<input class="popUpInput" type="password" placeholder="Enter password" name="password">
 					<button class="popUpLogInButton" type="submit">Log in</button>
-					<a href="signup.php">Create account</a>	
+					<a href="sign-up.php">Create account</a>	
 					<?php
 						if (isset($_SESSION['error'])) {
 							echo "</br>".$_SESSION['error']."</br>";

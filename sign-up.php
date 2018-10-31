@@ -143,79 +143,92 @@
 				</button>
 				<div class="collapse navbar-collapse" id="mainmenu">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="howitworks.php">&ensp; How it works? &ensp;</a></li>
-						<li class="nav-item active"><a class="nav-link" href="aboutus.php">&ensp; About us &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="how-it-works.php">&ensp; How it works? &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="about-us.php">&ensp; About us &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="contact.php">&ensp; Contact &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="#" onclick="document.getElementById('modal-wrapper').style.display='block'">&ensp; Log in &ensp;</a></li>
-						<li class="nav-item active"><a class="nav-link" href="signup.php">&ensp; Sign up &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="sign-up.php">&ensp; Sign up &ensp;</a></li>
 					</ul>
 				</div>
 			</nav>	
 		</header>
-		<form method="post">
-			Login: <input type="text" value="<?php
-				if (isset($_SESSION['fr_login'])) {
-					echo $_SESSION['fr_login'];
-					unset($_SESSION['fr_login']);
-				}
-			?>" name="login"/><br/>
-			<?php
-				if (isset($_SESSION['e_login'])) {
-					echo '<div class="error">'.$_SESSION['e_login'].'</div>';
-					unset($_SESSION['e_login']);
-				}
-			?>
-			E-mail: <input type="text" value="<?php
-				if (isset($_SESSION['fr_email'])) {
-					echo $_SESSION['fr_email'];
-					unset($_SESSION['fr_email']);
-				}
-			?>" name="email"/><br/>
-			<?php
-				if (isset($_SESSION['e_email'])) {
-					echo '<div class="error">'.$_SESSION['e_email'].'</div>';
-					unset($_SESSION['e_email']);
-				}
-			?>
-			Password: <input type="password" value="<?php
-				if (isset($_SESSION['fr_password1']) ) {
-					echo $_SESSION['fr_password1'];
-					unset($_SESSION['fr_password1']);
-				}
-			?>" name="password1"/><br/>
-			<?php
-				if (isset($_SESSION['e_password'])) {
-					echo '<div class="error">'.$_SESSION['e_password'].'</div>';
-					unset($_SESSION['e_password']);
-				}
-			?>
-			Repeat password: <input type="password" value="<?php
-				if (isset($_SESSION['fr_password2'])) {
-					echo $_SESSION['fr_password2'];
-					unset($_SESSION['fr_password2']);
-				}
-			?>" name="password2"/><br/>
-			<label><input type="checkbox" name="rules" <?php
-				if (isset($_SESSION['fr_rules'])) {
-					echo "checked";
-					unset($_SESSION['fr_rules']);
-				}
-			?>/>Accept the rules</label><br/> 
-			<?php
-				if (isset($_SESSION['e_rules'])) {
-					echo '<div class="error">'.$_SESSION['e_rules'].'</div>';
-					unset($_SESSION['e_rules']);
-				}
-			?>
-			<div class="g-recaptcha" data-sitekey="6LeK63QUAAAAADrg75dHw0aAN58FuxoNMmk56rFn"></div>
-			<?php
-				if (isset($_SESSION['e_bot'])) {
-					echo '<div class="error">'.$_SESSION['e_bot'].'</div>';
-					unset($_SESSION['e_bot']);
-				}
-			?>
-			<input type="submit" value="Register"/></br>
-		</form>
+		<div class="container col-11 col-sm-9">
+		
+		
+		
+		
+		
+			<form method="post">
+				Login: <input type="text" value="<?php
+					if (isset($_SESSION['fr_login'])) {
+						echo $_SESSION['fr_login'];
+						unset($_SESSION['fr_login']);
+					}
+				?>" name="login"/><br/>
+				<?php
+					if (isset($_SESSION['e_login'])) {
+						echo '<div class="error">'.$_SESSION['e_login'].'</div>';
+						unset($_SESSION['e_login']);
+					}
+				?>
+				E-mail: <input type="text" value="<?php
+					if (isset($_SESSION['fr_email'])) {
+						echo $_SESSION['fr_email'];
+						unset($_SESSION['fr_email']);
+					}
+				?>" name="email"/><br/>
+				<?php
+					if (isset($_SESSION['e_email'])) {
+						echo '<div class="error">'.$_SESSION['e_email'].'</div>';
+						unset($_SESSION['e_email']);
+					}
+				?>
+				Password: <input type="password" value="<?php
+					if (isset($_SESSION['fr_password1']) ) {
+						echo $_SESSION['fr_password1'];
+						unset($_SESSION['fr_password1']);
+					}
+				?>" name="password1"/><br/>
+				<?php
+					if (isset($_SESSION['e_password'])) {
+						echo '<div class="error">'.$_SESSION['e_password'].'</div>';
+						unset($_SESSION['e_password']);
+					}
+				?>
+				Repeat password: <input type="password" value="<?php
+					if (isset($_SESSION['fr_password2'])) {
+						echo $_SESSION['fr_password2'];
+						unset($_SESSION['fr_password2']);
+					}
+				?>" name="password2"/><br/>
+				<label><input type="checkbox" name="rules" <?php
+					if (isset($_SESSION['fr_rules'])) {
+						echo "checked";
+						unset($_SESSION['fr_rules']);
+					}
+				?>/>Accept the rules</label><br/> 
+				<?php
+					if (isset($_SESSION['e_rules'])) {
+						echo '<div class="error">'.$_SESSION['e_rules'].'</div>';
+						unset($_SESSION['e_rules']);
+					}
+				?>
+				<div class="g-recaptcha" data-sitekey="6LeK63QUAAAAADrg75dHw0aAN58FuxoNMmk56rFn"></div>
+				<?php
+					if (isset($_SESSION['e_bot'])) {
+						echo '<div class="error">'.$_SESSION['e_bot'].'</div>';
+						unset($_SESSION['e_bot']);
+					}
+				?>
+				<input type="submit" value="Register"/></br>
+				
+				
+				
+				
+				
+
+			</form>
+		</div>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

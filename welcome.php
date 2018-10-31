@@ -47,14 +47,14 @@
 				beFree
 				<button onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:100px;">Log in</button>
 				<div id="modal-wrapper" class="background">
-					<form class="popUpContent animate" action="login.php" method="post">  
+					<form class="popUpContent animate" action="log-in.php" method="post">  
 						<div class="popUpContainer">
 							<span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
-							<img src="img/avatar.jpg" alt="Avatar" class="avatar">
+							<img src="img/avatar.png" alt="Avatar" class="avatar">
 							<input class="popUpInput" type="text" placeholder="Enter login" name="login">
 							<input class="popUpInput" type="password" placeholder="Enter password" name="password">
 							<button class="popUpLogInButton" type="submit">Log in</button>
-							<a href="signup.php">Create account</a>
+							<a href="sign-up.php">Create account</a>
 							
 							<?php
 							//add automatically pop-up

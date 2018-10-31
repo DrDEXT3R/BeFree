@@ -15,7 +15,7 @@
 		<script src="code.js"></script>	
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
 	</head>
-	<body background="tla/2.png">
+	<body>
 		<header>
 			<nav class="navbar navbar-default navbar-expand-lg">
 				<a class="navbar-brand" href="index.php"><img src="img/logo.png" class="d-inline-block mr-1" alt=""> BeFree</a>
@@ -24,30 +24,38 @@
 				</button>
 				<div class="collapse navbar-collapse" id="mainmenu">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="howitworks.php">&ensp; How it works? &ensp;</a></li>
-						<li class="nav-item active"><a class="nav-link" href="aboutus.php">&ensp; About us &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="how-it-works.php">&ensp; How it works? &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="about-us.php">&ensp; About us &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="contact.php">&ensp; Contact &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="#" onclick="document.getElementById('modal-wrapper').style.display='block'">&ensp; Log in &ensp;</a></li>
-						<li class="nav-item active"><a class="nav-link" href="signup.php">&ensp; Sign up &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="sign-up.php">&ensp; Sign up &ensp;</a></li>
 					</ul>
 				</div>
 			</nav>	
 		</header>
+		<div class="container col-11 col-sm-9">
 		
-		About us
+		
+		
+		
+		
+		How it works?
 	
 	
-		
-
+	
+	
+	
+	
+		</div>
 		<div id="modal-wrapper" class="background">
-			<form class="popUpContent animate" action="login.php" method="post">  
+			<form class="popUpContent animate" action="log-in.php" method="post">  
 				<div class="popUpContainer">
 					<span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
 					<img src="img/avatar.png" alt="Avatar" class="avatar">
 					<input class="popUpInput" type="text" placeholder="Enter login" name="login">
 					<input class="popUpInput" type="password" placeholder="Enter password" name="password">
 					<button class="popUpLogInButton" type="submit">Log in</button>
-					<a href="signup.php">Create account</a>	
+					<a href="sign-up.php">Create account</a>	
 					<?php
 						if (isset($_SESSION['error'])) {
 							echo "</br>".$_SESSION['error']."</br>";

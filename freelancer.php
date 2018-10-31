@@ -21,7 +21,7 @@
 		<script src="code.js"></script>	
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
 	</head>
-	<body background="tla/1.png">
+	<body>
 		<header>
 			<nav class="navbar navbar-default navbar-expand-lg">
 				<a class="navbar-brand" href="index.php"><img src="img/logo.png" class="d-inline-block mr-1" alt=""> BeFree</a>
@@ -30,17 +30,17 @@
 				</button>
 				<div class="collapse navbar-collapse" id="mainmenu">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="howitworks.php">&ensp; How it works? &ensp;</a></li>
-						<li class="nav-item active"><a class="nav-link" href="aboutus.php">&ensp; About us &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="how-it-works.php">&ensp; How it works? &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="about-us.php">&ensp; About us &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="contact.php">&ensp; Contact &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="#" onclick="document.getElementById('modal-wrapper').style.display='block'">&ensp; Log in &ensp;</a></li>
-						<li class="nav-item active"><a class="nav-link" href="signup.php">&ensp; Sign up &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="sign-up.php">&ensp; Sign up &ensp;</a></li>
 					</ul>
 				</div>
 			</nav>	
 		</header>
 	
-			<div class="container col-11 col-sm-9">
+			<div class="container containerFreelancer col-11 col-sm-9">
 
 				<?php
 				
@@ -67,45 +67,33 @@
 									
 									
 									echo '<div class="offer">
-									
 											<div class="block col-12 col-md-3">
 												<div class="image"> 
 													<img src="img/no_image.png" alt="img">
 												</div>		
 												<div class="basicInfo"> 
-													<img src="img/money.png"> Renumeration: <font color="#198BD2">'.$row['price'].'$</font> </br> 
-													<img src="img/phone.png"> Phone: <font color="#198BD2">'.$row['phone'].'</font> </br>
-													<img src="img/email.png"> E-mail: <font color="#198BD2">'.$row['email'].'</font> </br>
+													<img src="img/money.png"> Renumeration: <font>'.$row['price'].'$</font></br> 
+													<img src="img/phone.png"> Phone: <font>'.$row['phone'].'</font></br>
+													<img src="img/email.png"> E-mail: <font>'.$row['email'].'</font></br>
 												</div>
-											</div>
-											
+											</div>										
 											<div class="date col-12 col-md-9">
 												'.$formattedDate.'
-											</div>
-											
+											</div>										
 											<div class="employer col-12 col-md-9"> 
 												> '.$row['employer'].' < </br>
 											</div> 
-											
 											<div class="technique col-12 col-md-4">
-												<img src="img/tools.png"> Technique: <font color="#198BD2">'.$row['technique'].'</font></br> 
+												<img src="img/tools.png"> Technique: <font>'.$row['technique'].'</font></br> 
 											</div>
-											
-											
-											
 											<div class="location col-12 col-md-4"> 
-												<img src="img/location.png"> Location: <font color="#198BD2">'.$row['location'].'</font></br>
+												<img src="img/location.png"> Location: <font>'.$row['location'].'</font></br>
 											</div>
-											
 											<div class="description col-12 col-md-9"> 
 												<img src="img/description.png"> <a>Description:</a></br>'.$row['description'].'</br>
 											</div>
-											
-											
-											
-											<div class="divider col-12"></div>	
-										</div>';
-									
+										</div>
+										<div class="divider col-12"></div>';
 								}
 							}
 							else {
@@ -123,12 +111,9 @@
 				?>
 			
 			</div>
-			
-			
-			
-
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	</body>
 </html>
+										
