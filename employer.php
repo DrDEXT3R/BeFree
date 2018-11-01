@@ -84,8 +84,10 @@
 			else {
 				//Everything OK
 				if ($succVal==true) {
-					if( $connection->query("INSERT INTO jobs VALUES(NULL,'$price','$phone','$email','$technique','$employer','$description','$location',now())") ) {
+					$fileName = $_FILES["fileToUpload"]["name"];
+					if( $connection->query("INSERT INTO jobs VALUES(NULL,'$price','$phone','$email','$technique','$employer','$description','$location','$fileName',now())") ) {
 						$_SESSION['succRegistration'] = true;
+						include 'upload.php';
 						header('Location: added.php');
 					}
 					else {
@@ -125,7 +127,7 @@
 			
 
 			
-			<form method="post">
+			<form method="post" enctype="multipart/form-data">
 				Employer: <input type="text" value="<?php
 					if (isset($_SESSION['fr_employer'])) {
 						echo $_SESSION['fr_employer'];
@@ -210,6 +212,12 @@
 						unset($_SESSION['e_price']);
 					}
 				?>
+				
+				Select image to upload:
+				<input type="file" name="fileToUpload" id="fileToUpload"></br>
+				
+				
+				
 				<input type="submit" value="Add announcement"/></br>
 			</form>
 			

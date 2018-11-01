@@ -65,11 +65,17 @@
 									$min = date("i",strtotime($date));
 									$formattedDate = $day.' '.$month.' '.$year.' &nbsp;&nbsp;'.$hour.':'.$min;
 									
+									//check if any image is added to offer
+									if($row['image']) 
+										$imgName = $row['image'];
+									else
+										$imgName = "no_image.png";
+									
 									
 									echo '<div class="offer">
 											<div class="block col-12 col-md-3">
 												<div class="image"> 
-													<img src="img/no_image.png" alt="img">
+													<img src="uploads/'.$imgName.'" alt="img">
 												</div>		
 												<div class="basicInfo"> 
 													<img src="img/money.png"> Renumeration: <font>'.$row['price'].'$</font></br> 
