@@ -10,11 +10,11 @@
 		$login=$_POST['login'];
 		if ((strlen($login)<3) || (strlen($login)>20)) {
 			$succVal=false;
-			$_SESSION['e_login']="Login must be at least 3 and up to 20 characters long!";
+			$_SESSION['e_login']="*Login must be at least 3 and up to 20 characters long!";
 		}
 		if (ctype_alnum($login)==false) {
 			$succVal=false;
-			$_SESSION['e_login']="Login must contain only letters and numbers!";
+			$_SESSION['e_login']="*Login must contain only letters and numbers!";
 		}
 		
 		//check e-mail
@@ -22,7 +22,7 @@
 		$emailB=filter_var($email,FILTER_SANITIZE_EMAIL);
 		if ((filter_var($email,FILTER_VALIDATE_EMAIL)==false) || ($emailB!=$email)) {
 			$succVal=false;
-			$_SESSION['e_email']="Please insert a valid email address!";
+			$_SESSION['e_email']="*Please insert a valid email address!";
 		}
 		
 		//check password
@@ -30,11 +30,11 @@
 		$password2=$_POST['password2'];
 		if ((strlen($password1)<8) || (strlen($password1)>20)) {
 			$succVal=false;
-			$_SESSION['e_password']="Password must be at least 8 and up to 20 characters long!";
+			$_SESSION['e_password']="*Password must be at least 8 and up to 20 characters long!";
 		}
 		if ($password1!=$password2) {
 			$succVal=false;
-			$_SESSION['e_password']="Both passwords are not matching!";
+			$_SESSION['e_password']="*Both passwords are not matching!";
 		}
 		
 		$password_hash=password_hash($password1,PASSWORD_DEFAULT);
@@ -42,7 +42,7 @@
 		//checkbox 
 		if (!isset($_POST['rules'])) {
 			$succVal=false;
-			$_SESSION['e_rules']="Accept rules!";
+			$_SESSION['e_rules']="*Accept rules!";
 		}
 		
 		//Bot or not
@@ -51,7 +51,7 @@
 		$answer = json_decode($check);
 		if ($answer->success==false) {
 			$succVal=false;
-			$_SESSION['e_bot']="Please confirm you are not a robot!";
+			$_SESSION['e_bot']="*Please confirm you are not a robot!";
 		}
 		
 		//Remember the entered data
@@ -122,15 +122,19 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css">	
 		<link rel="stylesheet" href="css/navbar.css">
-		<link rel="stylesheet" href="css/loginPopUp.css">	
+		<link rel="stylesheet" href="css/loginPopUp.css">
+		<link rel="stylesheet" href="css/signup.css">
 		<script src="code.js"></script>	
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<style>
 			.error {
 				color: red;
-				margin-top: 10px;
-				margin-bottom: 10px;
+				font-size: 20px;
+				//margin-top: 10px;
+				margin-bottom: 20px;
+				text-align: center;
+				font-family:serif;
 			}
 		</style>
 	</head>
@@ -159,54 +163,54 @@
 		
 		
 			<form method="post">
-				Login: <input type="text" value="<?php
+				<input type="text" placeholder="Login" value="<?php
 					if (isset($_SESSION['fr_login'])) {
 						echo $_SESSION['fr_login'];
 						unset($_SESSION['fr_login']);
 					}
-				?>" name="login"/><br/>
+				?>" name="login"/>
 				<?php
 					if (isset($_SESSION['e_login'])) {
 						echo '<div class="error">'.$_SESSION['e_login'].'</div>';
 						unset($_SESSION['e_login']);
 					}
 				?>
-				E-mail: <input type="text" value="<?php
+				<input type="text" placeholder="E-mail" value="<?php
 					if (isset($_SESSION['fr_email'])) {
 						echo $_SESSION['fr_email'];
 						unset($_SESSION['fr_email']);
 					}
-				?>" name="email"/><br/>
+				?>" name="email"/>
 				<?php
 					if (isset($_SESSION['e_email'])) {
 						echo '<div class="error">'.$_SESSION['e_email'].'</div>';
 						unset($_SESSION['e_email']);
 					}
 				?>
-				Password: <input type="password" value="<?php
+				<input type="password" placeholder="Password" value="<?php
 					if (isset($_SESSION['fr_password1']) ) {
 						echo $_SESSION['fr_password1'];
 						unset($_SESSION['fr_password1']);
 					}
-				?>" name="password1"/><br/>
+				?>" name="password1"/>
 				<?php
 					if (isset($_SESSION['e_password'])) {
 						echo '<div class="error">'.$_SESSION['e_password'].'</div>';
 						unset($_SESSION['e_password']);
 					}
 				?>
-				Repeat password: <input type="password" value="<?php
+				<input type="password" placeholder="Repeat password:" value="<?php
 					if (isset($_SESSION['fr_password2'])) {
 						echo $_SESSION['fr_password2'];
 						unset($_SESSION['fr_password2']);
 					}
-				?>" name="password2"/><br/>
+				?>" name="password2"/>
 				<label><input type="checkbox" name="rules" <?php
 					if (isset($_SESSION['fr_rules'])) {
 						echo "checked";
 						unset($_SESSION['fr_rules']);
 					}
-				?>/>Accept the rules</label><br/> 
+				?>/>Accept the rules</label>
 				<?php
 					if (isset($_SESSION['e_rules'])) {
 						echo '<div class="error">'.$_SESSION['e_rules'].'</div>';
@@ -220,7 +224,7 @@
 						unset($_SESSION['e_bot']);
 					}
 				?>
-				<input type="submit" value="Register"/></br>
+				<input type="submit" value="Register"/>
 				
 				
 				
