@@ -88,7 +88,6 @@
 					if( $connection->query("INSERT INTO jobs VALUES(NULL,'$price','$phone','$email','$technique','$employer','$description','$location','$fileName',now())") ) {
 						$_SESSION['succRegistration'] = true;
 						include 'upload.php';
-						header('Location: added.php');
 					}
 					else {
 						throw new Exception($connection->error);

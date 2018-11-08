@@ -1,3 +1,18 @@
+@mixin dark-overlay{
+  &:after{
+    content: "";
+    width: 50%;
+    height: auto;
+    position: absolute;
+    z-index: -1;  // Take note of this negative z-index and compare to each article's positive z-index. This helps your content to show up over the overlay.
+    top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+  }
+}
+
+
 body {
 	background-image: url(../img/background.png);
 	margin: 0; 
@@ -13,14 +28,23 @@ body {
 }
 
 .content {
-	background-image: url(../img/main.jpg);
+	background: url(../img/main.jpg) no-repeat center center ; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	margin: 0px;
 	margin: 0px;
 	width: 100%;
 	height: 600px;
-	background-size: cover; 
-	background-repeat: no-repeat; 
+	@include dark-overlay;
 }
+.full-overlay:after{
+  background:rgba(0, 0, 0, 0.75);
+}
+
+
+
 
 .option1 {
 	width: 280px;
