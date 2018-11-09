@@ -26,6 +26,7 @@
 		<link rel="stylesheet" href="css/loginPopUp.css">	
 		<script src="code.js"></script>	
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico&amp;subset=latin-ext" rel="stylesheet">
 	</head>
 	<body>
 		<header>
@@ -51,15 +52,16 @@
 
 		
 		<div class="content">
+			
+			<h1>&nbsp;</h1>
+			<h1 align="center" class="animated slideInLeft slow">Are you looking for an <font>expert?</font>&emsp;Post an ad...</h1>			
+			<h1 align="center" class="animated slideInRight slow">Do you want to earn <font>money?</font>&emsp;Find work...</h1>
+			<h1 align="center" class="animated bounceInUp slow delay-2s">Just <font>be free!</font></h1>
 		
-			<h1 class="animated bounceInLeft slow">Post an ad</h1>
-			<h1 class="animated bounceInRight slow delay-2s">Find work</h1>
-			<h1 class="animated bounceInUp slow delay-4s">Just BE FREE!</h1>
-		
-			<div class="option1">
+			<div class="option1 col-sm-6">
 				<a href="freelancer.php">I want to WORK</a>
 			</div>	
-			<div class="option2">
+			<div class="option2 col-sm-6">
 				<a href="employer.php">I want to HIRE</a>
 			</div>
 			
