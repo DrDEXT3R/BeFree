@@ -109,120 +109,201 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Freelance jobs</title>
 		<meta name="description" content="Job board for freelancers and employers. Find for FREE commissions and offers of remote work.">
 		<meta name="keywords" content="freelancer, job, work, offers, commissions, remote">
 		<meta name="author" content="Tomasz Strzoda">		
 		<meta http-equiv="X-Ua-Compatible" content="IE-edge,chrome=1">
-		<link rel="stylesheet" href="css/main.css">	
-		<script src="code.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css">	
+		<link rel="stylesheet" href="css/navbar.css">
+		<link rel="stylesheet" href="css/loginPopUp.css">
+		<link rel="stylesheet" href="css/bookmarks.css">
+		<link rel="stylesheet" href="css/employer.css">
+		<script src="code.js"></script>	
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
 	</head>
 	<body>
-		<div class="container">
-			<div class="logo">
-			beFree
-			</div>
-			<div class="menu"></div>
+		<header>
+			<nav class="navbar navbar-default navbar-expand-lg">
+				<a class="navbar-brand" href="index.php"><img src="img/logo.png" class="d-inline-block mr-1" alt=""> BeFree</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expended="false" aria-label="nav toggler">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="mainmenu">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a class="nav-link" href="how-it-works.php">&ensp; How it works? &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="about-us.php">&ensp; About us &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="contact.php">&ensp; Contact &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="#" onclick="document.getElementById('modal-wrapper').style.display='block'">&ensp; Log in &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="sign-up.php">&ensp; Sign up &ensp;</a></li>
+					</ul>
+				</div>
+			</nav>	
+		</header>
+		<div class="container col-11 col-sm-9">
 			
 
 			
 			<form method="post" enctype="multipart/form-data">
-				Employer: <input type="text" value="<?php
-					if (isset($_SESSION['fr_employer'])) {
-						echo $_SESSION['fr_employer'];
-						unset($_SESSION['fr_employer']);
-					}
-				?>" name="employer"/><br/>
-				<?php
-					if (isset($_SESSION['e_employer'])) {
-						echo '<div class="error">'.$_SESSION['e_employer'].'</div>';
-						unset($_SESSION['e_employer']);
-					}
-				?>
-				E-mail: <input type="text" value="<?php
-					if (isset($_SESSION['fr_email'])) {
-						echo $_SESSION['fr_email'];
-						unset($_SESSION['fr_email']);
-					}
-				?>" name="email"/><br/>
-				<?php
-					if (isset($_SESSION['e_email'])) {
-						echo '<div class="error">'.$_SESSION['e_email'].'</div>';
-						unset($_SESSION['e_email']);
-					}
-				?>
-				Technique: <input type="text" value="<?php
-					if (isset($_SESSION['fr_technique']) ) {
-						echo $_SESSION['fr_technique'];
-						unset($_SESSION['fr_technique']);
-					}
-				?>" name="technique"/><br/>
-				<?php
-					if (isset($_SESSION['e_technique'])) {
-						echo '<div class="error">'.$_SESSION['e_technique'].'</div>';
-						unset($_SESSION['e_technique']);
-					}
-				?>
-				Description: <input type="text" value="<?php
-					if (isset($_SESSION['fr_description']) ) {
-						echo $_SESSION['fr_description'];
-						unset($_SESSION['fr_description']);
-					}
-				?>" name="description"/><br/>
-				<?php
-					if (isset($_SESSION['e_description'])) {
-						echo '<div class="error">'.$_SESSION['e_description'].'</div>';
-						unset($_SESSION['e_description']);
-					}
-				?>
-				Location: <input type="text" value="<?php
-					if (isset($_SESSION['fr_location']) ) {
-						echo $_SESSION['fr_location'];
-						unset($_SESSION['fr_location']);
-					}
-				?>" name="location"/><br/>
-				<?php
-					if (isset($_SESSION['e_location'])) {
-						echo '<div class="error">'.$_SESSION['e_location'].'</div>';
-						unset($_SESSION['e_location']);
-					}
-				?>
-				Phone number: <input type="text" value="<?php
-					if (isset($_SESSION['fr_phone'])) {
-						echo $_SESSION['fr_phone'];
-						unset($_SESSION['fr_phone']);
-					}
-				?>" name="phone"/><br/>
-				<?php
-					if (isset($_SESSION['e_phone'])) {
-						echo '<div class="error">'.$_SESSION['e_phone'].'</div>';
-						unset($_SESSION['e_phone']);
-					}
-				?>
-				Price: <input type="text" value="<?php
-					if (isset($_SESSION['fr_price'])) {
-						echo $_SESSION['fr_price'];
-						unset($_SESSION['fr_price']);
-					}
-				?>" name="price"/>$<br/>
-				<?php
-					if (isset($_SESSION['e_price'])) {
-						echo '<div class="error">'.$_SESSION['e_price'].'</div>';
-						unset($_SESSION['e_price']);
-					}
-				?>
-				
-				Select image to upload:
-				<input type="file" name="fileToUpload" id="fileToUpload"></br>
-				
-				
-				
-				<input type="submit" value="Add announcement"/></br>
+				<div class="row">
+					<img src="img/employer.png">
+					<div class="name">Employer </div>
+					<input class="col-xl-9 right" type="text" value="<?php
+						if (isset($_SESSION['fr_employer'])) {
+							echo $_SESSION['fr_employer'];
+							unset($_SESSION['fr_employer']);
+						}
+					?>" name="employer" placeholder="Company name / person who employs"/><br/>
+					<?php
+						if (isset($_SESSION['e_employer'])) {
+							echo '<div class="error">'.$_SESSION['e_employer'].'</div>';
+							unset($_SESSION['e_employer']);
+						}
+					?>
+				</div>
+				<div class="row">
+					<img src="img/email.png">
+					<div class="name">E-mail </div>
+					<input class="col-xl-9 right" type="text" value="<?php
+						if (isset($_SESSION['fr_email'])) {
+							echo $_SESSION['fr_email'];
+							unset($_SESSION['fr_email']);
+						}
+					?>" name="email" placeholder="name@example.com"/><br/>
+					<?php
+						if (isset($_SESSION['e_email'])) {
+							echo '<div class="error">'.$_SESSION['e_email'].'</div>';
+							unset($_SESSION['e_email']);
+						}
+					?>
+				</div>
+				<div class="row">
+					<img src="img/tools.png">
+					<div class="name">Technology </div>
+					<input class="col-xl-9 right" type="text" value="<?php
+						if (isset($_SESSION['fr_technique']) ) {
+							echo $_SESSION['fr_technique'];
+							unset($_SESSION['fr_technique']);
+						}
+					?>" name="technique" placeholder="Execution technologies"/><br/>
+					<?php
+						if (isset($_SESSION['e_technique'])) {
+							echo '<div class="error">'.$_SESSION['e_technique'].'</div>';
+							unset($_SESSION['e_technique']);
+						}
+					?>
+				</div>
+				<div class="row">
+					<img src="img/location.png">
+					<div class="name">Location </div>
+					<input class="col-xl-9 right" type="text" value="<?php
+						if (isset($_SESSION['fr_location']) ) {
+							echo $_SESSION['fr_location'];
+							unset($_SESSION['fr_location']);
+						}
+					?>" name="location" placeholder="Company / person location"/><br/>
+					<?php
+						if (isset($_SESSION['e_location'])) {
+							echo '<div class="error">'.$_SESSION['e_location'].'</div>';
+							unset($_SESSION['e_location']);
+						}
+					?>
+				</div>
+				<div class="row">
+					<img src="img/phone.png">
+					<div class="name">Phone number </div>
+					<input class="col-xl-9 right" type="text" value="<?php
+						if (isset($_SESSION['fr_phone'])) {
+							echo $_SESSION['fr_phone'];
+							unset($_SESSION['fr_phone']);
+						}
+					?>" name="phone" placeholder="Contact number"/><br/>
+					<?php
+						if (isset($_SESSION['e_phone'])) {
+							echo '<div class="error">'.$_SESSION['e_phone'].'</div>';
+							unset($_SESSION['e_phone']);
+						}
+					?>
+				</div>
+				<div class="row">
+					<img src="img/money.png">
+					<div class="name">Remuneration </div>
+					<input class="col-xl-9 right" type="text" value="<?php
+						if (isset($_SESSION['fr_price'])) {
+							echo $_SESSION['fr_price'];
+							unset($_SESSION['fr_price']);
+						}
+					?>" name="price" placeholder="Remuneration ($)"/><br/>
+					<?php
+						if (isset($_SESSION['e_price'])) {
+							echo '<div class="error">'.$_SESSION['e_price'].'</div>';
+							unset($_SESSION['e_price']);
+						}
+					?>
+				</div>
+				<div class="row">
+					<img src="img/description.png">
+					<div class="name">Description </div>
+					<input class="col-xl-9 right" type="text" value="<?php
+						if (isset($_SESSION['fr_description']) ) {
+							echo $_SESSION['fr_description'];
+							unset($_SESSION['fr_description']);
+						}
+					?>" name="description" placeholder="I am looking for someone who..." style="height:200px"/><br/><br/>
+					<?php
+						if (isset($_SESSION['e_description'])) {
+							echo '<div class="error">'.$_SESSION['e_description'].'</div>';
+							unset($_SESSION['e_description']);
+						}
+					?>
+				</div>
+				<div class="row">
+					<img src="img/image.png">
+					<div class="name">Image to upload </div>
+					<input class="col-xl-9 right p-2" type="file" name="fileToUpload" id="fileToUpload" style="height:90px"></br><br/>
+				</div>
+				<div align="right">
+					<input type="submit" value="Add announcement"/>
+				</div>
 			</form>
 			
 			
 			
 			
 		</div>
+		<div id="modal-wrapper" class="background">
+			<form class="popUpContent animate" action="log-in.php" method="post">  
+				<div class="popUpContainer">
+					<span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+					<img src="img/avatar.png" alt="Avatar" class="avatar">
+					<input class="popUpInput" type="text" placeholder="Enter login" name="login">
+					<input class="popUpInput" type="password" placeholder="Enter password" name="password">
+					<button class="popUpLogInButton" type="submit">Log in</button>
+					<a href="sign-up.php">Create account</a>	
+					<?php
+						if (isset($_SESSION['error'])) {
+							echo "</br>".$_SESSION['error']."</br>";
+							echo '<script>var modal = document.getElementById("modal-wrapper");window.onload = function(){modal.style.display="block";}</script>';
+						}
+					?>
+				</div>
+			</form>
+		</div>	
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	</body>
 </html>
+
+
+
+
+		
+		
+
+
+		
+	
+		

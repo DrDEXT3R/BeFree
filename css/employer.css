@@ -1,0 +1,83 @@
+/*input[type=text] {
+    border: 2px solid DodgerBlue;
+    border-radius: 4px;
+	background-color: none;
+}*/
+.row {
+	min-height:60px;
+}
+
+.row img {
+	max-width:48px; 
+	max-height:48px;
+}
+
+.name {
+	min-width:180px; 
+	max-width:180px; 
+	max-height:48px;
+	background-image: url(../img/brush.png);
+	color: white;
+	text-align: center;
+}
+
+input {
+	height: 48px;
+}
+
+
+input[type=text] {
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 20px;
+	font-family: normal;
+	resize: vertical;
+}
+
+input[type=text]:focus {
+    border: 3px solid DodgerBlue;
+}
+
+input[type=submit] {
+	background-image: url(../img/bigBrush.png);
+    color: white;
+    border: none;
+    cursor: pointer;
+	min-width: 250px; 
+	max-width: 250px; 
+	min-height: 80px;
+	max-height: 80px;
+	font-size: 35px;
+	font-weight: bold;
+	font-family: 'Amatic SC', cursive;	
+}
+input[type=submit]:hover {
+	opacity: 0.9;
+	border: 1px solid DodgerBlue;
+}
+
+
+input[type=file] {
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: normal;
+	font-family: normal;
+	padding: 0;
+	margin: 0;
+}
+
+.error {
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 20px;
+	font-family: normal;
+	color: red;
+	margin-left: auto; 
+	margin-right: 15px; 
+}
+input[type=text] .error {
+    border: 3px solid red;
+}

@@ -78,7 +78,7 @@
 													<img src="uploads/'.$imgName.'" alt="img">
 												</div>		
 												<div class="basicInfo"> 
-													<img src="img/money.png"> Renumeration: <font>'.$row['price'].'$</font></br> 
+													<img src="img/money.png"> Remuneration: <font>'.$row['price'].'$</font></br> 
 													<img src="img/phone.png"> Phone: <font>'.$row['phone'].'</font></br>
 													<img src="img/email.png"> E-mail: <font>'.$row['email'].'</font></br>
 												</div>
@@ -90,7 +90,7 @@
 												> '.$row['employer'].' < </br>
 											</div> 
 											<div class="technique col-12 col-md-4">
-												<img src="img/tools.png"> Technique: <font>'.$row['technique'].'</font></br> 
+												<img src="img/tools.png"> Technology: <font>'.$row['technique'].'</font></br> 
 											</div>
 											<div class="location col-12 col-md-4"> 
 												<img src="img/location.png"> Location: <font>'.$row['location'].'</font></br>

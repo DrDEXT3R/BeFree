@@ -33,11 +33,23 @@ h1 font {
 	color: white;
 }
 
+.options {
+	margin: 0 auto;
+}
+
+.right { 
+	float: right;
+}
+
+.left { 
+	float: left;
+}
+
 .option1 {
 	width: 280px;
 	height: 60px;
 	background-color: rgb(25,139,210);
-	position: relative;
+	/*position: relative;*/
 	left: 100px;
 	/*top: 350px; */
 	border-radius: 15px;
@@ -49,6 +61,7 @@ h1 font {
 	font-size: 40px; 
 	line-height: 60px;
 	font-family: 'Amatic SC', cursive;
+	display: inline-block;
 }
 .option1 a {
 	color: white;
@@ -63,7 +76,7 @@ h1 font {
 	width: 280px;
 	height: 60px;
 	background-color: rgb(25,139,210);
-	position: relative;
+	/*position: relative;*/
 	left: 950px;
 	/*top: 270px; */
 	border-radius: 15px;
@@ -76,6 +89,7 @@ h1 font {
 	line-height: 60px;	
 	color: white;
 	font-family: 'Amatic SC', cursive;	
+	display: inline-block;
 }
 .option2 a {
 	color: white;
