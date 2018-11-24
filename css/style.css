@@ -34,7 +34,8 @@ h1 font {
 }
 
 .options {
-	margin: 0 auto;
+	margin: 30px auto;
+	min-height: 150px;
 }
 
 .right { 
@@ -45,15 +46,11 @@ h1 font {
 	float: left;
 }
 
-.option1 {
+.option1, .option2  {
 	width: 280px;
 	height: 60px;
-	background-color: rgb(25,139,210);
-	/*position: relative;*/
-	left: 100px;
-	/*top: 350px; */
+	background-color: DodgerBlue;
 	border-radius: 15px;
-    padding: 10px;	
 	-webkit-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
@@ -61,41 +58,14 @@ h1 font {
 	font-size: 40px; 
 	line-height: 60px;
 	font-family: 'Amatic SC', cursive;
+	font-weight: bold;
 	display: inline-block;
 }
-.option1 a {
+.option1 a, .option2 a {
 	color: white;
 	text-decoration: none;
 	display: block;
 }
-.option1:hover {
-    opacity: 0.9;
-}
-
-.option2 {
-	width: 280px;
-	height: 60px;
-	background-color: rgb(25,139,210);
-	/*position: relative;*/
-	left: 950px;
-	/*top: 270px; */
-	border-radius: 15px;
-    padding: 10px;
-	-webkit-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
-	text-align: center;
-	font-size: 40px;
-	line-height: 60px;	
-	color: white;
-	font-family: 'Amatic SC', cursive;	
-	display: inline-block;
-}
-.option2 a {
-	color: white;
-	text-decoration: none;
-	display: block;
-}
-.option2:hover {
+.option1:hover, .option2:hover {
     opacity: 0.9;
 }

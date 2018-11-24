@@ -58,11 +58,11 @@
 			<h1 align="center" class="animated slideInRight slow">Do you want to earn <font>money?</font>&emsp;Find work...</h1>
 			<h1 align="center" class="animated bounceInUp slow delay-2s">Just <font>be free!</font></h1>
 		
-			<div align="center" class="options col-sm-9">
-				<div class="option1 ">
+			<div align="center" class="options col-sm-9 d-flex justify-content-between flex-column flex-md-row">
+				<div class="option1">
 					<a href="freelancer.php">I want to WORK</a>
 				</div>	
-				<div class="option2 ">
+				<div class="option2">
 					<a href="employer.php">I want to HIRE</a>
 				</div>
 			</div>

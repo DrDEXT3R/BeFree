@@ -20,7 +20,7 @@
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: rgb(25,139,210);
+    color: DodgerBlue;
 }
 /* Link */
 .navbar-default .navbar-nav > li > a {
@@ -53,5 +53,5 @@ ul {
 	font-family: 'Amatic SC', cursive;
 }
 ul > li:hover {
-	background-color: rgb(25,139,210);
+	background-color: DodgerBlue;
 }
