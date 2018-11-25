@@ -23,7 +23,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 		<link rel="stylesheet" href="css/style.css">	
 		<link rel="stylesheet" href="css/navbar.css">	
-		<link rel="stylesheet" href="css/loginPopUp.css">	
+		<link rel="stylesheet" href="css/pop-up.css">	
 		<script src="code.js"></script>	
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Pacifico&amp;subset=latin-ext" rel="stylesheet">
@@ -32,7 +32,7 @@
 		<header>
 			<nav class="navbar navbar-default navbar-expand-lg">
 				<a class="navbar-brand" href="index.php"><img src="img/logo.png" class="d-inline-block mr-1" alt=""> BeFree</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expended="false" aria-label="nav toggler">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="nav toggler">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="mainmenu">
@@ -40,23 +40,25 @@
 						<li class="nav-item active"><a class="nav-link" href="how-it-works.php">&ensp; How it works? &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="about-us.php">&ensp; About us &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="contact.php">&ensp; Contact &ensp;</a></li>
-						<li class="nav-item active"><a class="nav-link" href="#" onclick="document.getElementById('modal-wrapper').style.display='block'">&ensp; Log in &ensp;</a></li>
-						<li class="nav-item active"><a class="nav-link" href="sign-up.php">&ensp; Sign up &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="#" data-toggle="modal" data-target="#logInModal">&ensp; Log in &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="#" data-toggle="modal" data-target="#signUpModal">&ensp; Sign up &ensp;</a></li>
 					</ul>
 				</div>
 			</nav>	
 		</header>
 		
+
+		
 		
 		
 
 		
-		<div class="content">
+		<div class="container content col-12">
 			
 			<h1>&nbsp;</h1>
-			<h1 align="center" class="animated slideInLeft slow">Are you looking for an <font>expert?</font>&emsp;Post an ad...</h1>			
-			<h1 align="center" class="animated slideInRight slow">Do you want to earn <font>money?</font>&emsp;Find work...</h1>
-			<h1 align="center" class="animated bounceInUp slow delay-2s">Just <font>be free!</font></h1>
+			<h1 align="center" class="d-none d-md-block d-md-block animated slideInLeft slow">Are you looking for an <font>expert?</font>&emsp;Post an ad...</h1>			
+			<h1 align="center" class="d-none d-md-block animated slideInRight slow">Do you want to earn <font>money?</font>&emsp;Find work...</h1>
+			<h1 align="center" class="animated bounceInUp slow">Just <font>be free!</font></h1>
 		
 			<div align="center" class="options col-sm-9 d-flex justify-content-between flex-column flex-md-row">
 				<div class="option1">
@@ -68,26 +70,117 @@
 			</div>
 			
 		</div>
-		<div id="modal-wrapper" class="background">
-			<form class="popUpContent animate" action="log-in.php" method="post">  
-				<div class="popUpContainer">
-					<span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
-					<img src="img/avatar.png" alt="Avatar" class="avatar">
-					<input class="popUpInput" type="text" placeholder="Enter login" name="login">
-					<input class="popUpInput" type="password" placeholder="Enter password" name="password">
-					<button class="popUpLogInButton" type="submit">Log in</button>
-					<a href="sign-up.php">Create account</a>	
-					<?php
-						if (isset($_SESSION['error'])) {
-							echo "</br>".$_SESSION['error']."</br>";
-							echo '<script>var modal = document.getElementById("modal-wrapper");window.onload = function(){modal.style.display="block";}</script>';
-						}
-					?>
-				</div>
-			</form>
-		</div>	
-
 		
+		
+		
+		
+		<!-- Log in modal -->
+		<div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="logInModalTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="logInModalLongTitle">Log in</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form action="log-in.php" method="post"> 
+							<img src="img/avatar.png" alt="Avatar" class="avatar">
+							<input class="popUpInput" type="text" placeholder="Enter login" name="login">
+							<input class="popUpInput" type="password" placeholder="Enter password" name="password">
+							<button class="popUpButton" type="submit">Log in</button>
+							<a href="sign-up.php">Create account</a>	
+							<?php
+								if (isset($_SESSION['error'])) {
+									echo "</br>".$_SESSION['error']."</br>";
+									echo '<script>var modal = document.getElementById("modal-wrapper");window.onload = function(){modal.style.display="block";}</script>';
+								}
+							?>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Sign up modal -->
+		<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="signUpModalLongTitle">Sign up</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form action="sign-up.php" method="post">
+							<input type="text" placeholder="Login" value="<?php
+								if (isset($_SESSION['fr_login'])) {
+									echo $_SESSION['fr_login'];
+									unset($_SESSION['fr_login']);
+								}
+							?>" name="login"/>
+							<?php
+								if (isset($_SESSION['e_login'])) {
+									echo '<div class="error">'.$_SESSION['e_login'].'</div>';
+									unset($_SESSION['e_login']);
+								}
+							?>
+							<input type="text" placeholder="E-mail" value="<?php
+								if (isset($_SESSION['fr_email'])) {
+									echo $_SESSION['fr_email'];
+									unset($_SESSION['fr_email']);
+								}
+							?>" name="email"/>
+							<?php
+								if (isset($_SESSION['e_email'])) {
+									echo '<div class="error">'.$_SESSION['e_email'].'</div>';
+									unset($_SESSION['e_email']);
+								}
+							?>
+							<input type="password" placeholder="Password" value="<?php
+								if (isset($_SESSION['fr_password1']) ) {
+									echo $_SESSION['fr_password1'];
+									unset($_SESSION['fr_password1']);
+								}
+							?>" name="password1"/>
+							<?php
+								if (isset($_SESSION['e_password'])) {
+									echo '<div class="error">'.$_SESSION['e_password'].'</div>';
+									unset($_SESSION['e_password']);
+								}
+							?>
+							<input type="password" placeholder="Repeat password:" value="<?php
+								if (isset($_SESSION['fr_password2'])) {
+									echo $_SESSION['fr_password2'];
+									unset($_SESSION['fr_password2']);
+								}
+							?>" name="password2"/>
+							<label><input type="checkbox" name="rules" <?php
+								if (isset($_SESSION['fr_rules'])) {
+									echo "checked";
+									unset($_SESSION['fr_rules']);
+								}
+							?>/>Accept the rules</label>
+							<?php
+								if (isset($_SESSION['e_rules'])) {
+									echo '<div class="error">'.$_SESSION['e_rules'].'</div>';
+									unset($_SESSION['e_rules']);
+								}
+							?>
+							<div class="g-recaptcha" data-sitekey="6LeK63QUAAAAADrg75dHw0aAN58FuxoNMmk56rFn"></div>
+							<?php
+								if (isset($_SESSION['e_bot'])) {
+									echo '<div class="error">'.$_SESSION['e_bot'].'</div>';
+									unset($_SESSION['e_bot']);
+								}
+							?>
+							<input type="submit" value="Register"/>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 		
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

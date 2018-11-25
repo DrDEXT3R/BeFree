@@ -1,0 +1,33 @@
+form {
+	text-align: center;
+}
+
+.popUpInput {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	font-size:16px;
+}
+
+.popUpButton {
+	background-color: DodgerBlue;
+    color: white;
+    padding: 8px 20px;
+    margin: 8px 8px;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+	font-size: 30px;
+	font-family: 'Amatic SC', cursive;
+}
+.popUpButton:hover {
+    opacity: 0.8;
+}
+
+.avatar {
+    width: 90%;
+	border-radius: 50%;
+}
