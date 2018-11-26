@@ -25,6 +25,8 @@
 		<link rel="stylesheet" href="css/navbar.css">	
 		<link rel="stylesheet" href="css/pop-up.css">	
 		<script src="code.js"></script>	
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Pacifico&amp;subset=latin-ext" rel="stylesheet">
 	</head>
@@ -69,6 +71,9 @@
 				</div>
 			</div>
 			
+			
+			
+			
 		</div>
 		
 		
@@ -90,11 +95,13 @@
 							<input class="popUpInput" type="text" placeholder="Enter login" name="login">
 							<input class="popUpInput" type="password" placeholder="Enter password" name="password">
 							<button class="popUpButton" type="submit">Log in</button>
-							<a href="sign-up.php">Create account</a>	
+							<a href="#" data-toggle="modal" data-target="#signUpModal">Create account</a>	
 							<?php
-								if (isset($_SESSION['error'])) {
-									echo "</br>".$_SESSION['error']."</br>";
-									echo '<script>var modal = document.getElementById("modal-wrapper");window.onload = function(){modal.style.display="block";}</script>';
+								if (isset($_SESSION['logInError'])) {
+									echo "</br>".$_SESSION['logInError']."</br>";
+									echo "<script>$(window).load(function(){
+												$('#logInModal').modal('show');
+										});</script>";
 								}
 							?>
 						</form>
@@ -104,7 +111,7 @@
 		</div>
 		<!-- Sign up modal -->
 		<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalTitle" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+			<div class="modal-dialog modal-dialog-centered" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title" id="signUpModalLongTitle">Sign up</h5>
@@ -113,8 +120,11 @@
 						</button>
 					</div>
 					<div class="modal-body">
+						
+							<img src="img/signup.png" alt="Image" class="avatar">
+						
 						<form action="sign-up.php" method="post">
-							<input type="text" placeholder="Login" value="<?php
+							<input class="popUpInput" type="text" placeholder="Login" value="<?php
 								if (isset($_SESSION['fr_login'])) {
 									echo $_SESSION['fr_login'];
 									unset($_SESSION['fr_login']);
@@ -126,7 +136,7 @@
 									unset($_SESSION['e_login']);
 								}
 							?>
-							<input type="text" placeholder="E-mail" value="<?php
+							<input class="popUpInput" type="text" placeholder="E-mail" value="<?php
 								if (isset($_SESSION['fr_email'])) {
 									echo $_SESSION['fr_email'];
 									unset($_SESSION['fr_email']);
@@ -138,7 +148,7 @@
 									unset($_SESSION['e_email']);
 								}
 							?>
-							<input type="password" placeholder="Password" value="<?php
+							<input class="popUpInput" type="password" placeholder="Password" value="<?php
 								if (isset($_SESSION['fr_password1']) ) {
 									echo $_SESSION['fr_password1'];
 									unset($_SESSION['fr_password1']);
@@ -150,7 +160,7 @@
 									unset($_SESSION['e_password']);
 								}
 							?>
-							<input type="password" placeholder="Repeat password:" value="<?php
+							<input class="popUpInput" type="password" placeholder="Repeat password:" value="<?php
 								if (isset($_SESSION['fr_password2'])) {
 									echo $_SESSION['fr_password2'];
 									unset($_SESSION['fr_password2']);
@@ -168,20 +178,26 @@
 									unset($_SESSION['e_rules']);
 								}
 							?>
-							<div class="g-recaptcha" data-sitekey="6LeK63QUAAAAADrg75dHw0aAN58FuxoNMmk56rFn"></div>
+							<div class="g-recaptcha" align="center" data-sitekey="6LeK63QUAAAAADrg75dHw0aAN58FuxoNMmk56rFn"></div>
 							<?php
 								if (isset($_SESSION['e_bot'])) {
 									echo '<div class="error">'.$_SESSION['e_bot'].'</div>';
 									unset($_SESSION['e_bot']);
 								}
 							?>
-							<input type="submit" value="Register"/>
+							<input class="popUpButton" type="submit" value="Register"/>
+							<?php
+								if (isset($_SESSION['signUpError'])) {
+									echo "<script>$(window).load(function(){
+												$('#signUpModal').modal('show');
+										});</script>";
+								}
+							?>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-		
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

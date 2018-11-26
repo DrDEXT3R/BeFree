@@ -29,5 +29,11 @@ form {
 
 .avatar {
     width: 90%;
-	border-radius: 50%;
+	margin-left: auto;
+    margin-right: auto;
+	display: block;
+}
+
+.modal {
+	z-index: 100001 !important; /*make pop-up on foreground*/
 }

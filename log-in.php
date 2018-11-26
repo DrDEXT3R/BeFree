@@ -2,6 +2,8 @@
 	
 	session_start();
 	
+	$_SESSION['showSignUpModal'] = false;
+	
 	if ((!isset($_POST['login'])) || (!isset($_POST['password']))) {
 		header('Location: index.php');
 		exit();
@@ -32,20 +34,18 @@
 						$_SESSION['id']=$row['id'];
 						$_SESSION['login'] = $row['login'];
 						
-						unset($_SESSION['error']);
+						unset($_SESSION['logInError']);
 						$result->close();
 						header('Location: action.php');
 					}
 					else {
-						$_SESSION['error']='<span style="color:red">Incorrect login or password!</span>';
+						$_SESSION['logInError']='<span style="color:red">Incorrect login or password!</span>';
 						header('Location: index.php');
 					}
 				}
 				else {
-					
-					$_SESSION['error']='<span style="color:red">Incorrect login or password!</span>';
-					header('Location: index.php');
-					
+					$_SESSION['logInError']='<span style="color:red">Incorrect login or password!</span>';
+					header('Location: index.php');					
 				}
 			}
 			else {

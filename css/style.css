@@ -67,7 +67,3 @@ h1 font {
 .option1:hover, .option2:hover {
     opacity: 0.9;
 }
-
-.modal {
-	z-index: 100001 !important; /*make pop-up on foreground*/
-}
