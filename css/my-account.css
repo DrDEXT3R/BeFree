@@ -1,0 +1,58 @@
+p {
+    display: inline-block;
+}
+
+input {
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 20px;
+	font-family: normal;
+	resize: vertical;
+}
+/*
+.image {
+	max-height: 256px;
+	max-width: 256px;
+	min-height: 256px;
+	min-width: 256px;
+}*/
+
+.image img {
+    width: 100%;
+	height: auto;
+	border-radius: 50%;
+}
+
+.hello {
+	font-size: 60px;
+	font-weight: bold;
+	font-family: 'Amatic SC', cursive;	
+	color: black;
+}
+
+.profile font {
+	color: DodgerBlue;
+}
+
+.hello  {
+	text-align: center;
+}
+
+.email {
+	font-size: 30px;
+}
+
+.changeEmail, .changePassword {
+	/*border: 3px solid DodgerBlue;*/
+	margin: 0;
+	margin-top: 50px;
+	padding: 0;
+	display: inline-block;
+	
+}
+
+.profileInfo {
+	text-align: center;
+}
+	
