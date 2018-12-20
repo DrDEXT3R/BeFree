@@ -74,6 +74,14 @@
 .description a {
 	font-size: 30px;
 }
+.description p {
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 20px;
+	font-family: normal;
+	resize: vertical;
+}
 
 .divider {
 	margin: 0;
