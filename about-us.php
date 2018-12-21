@@ -48,10 +48,10 @@
 			</nav>	
 		</header>
 		<div class="container col-11 col-sm-9">
-		
+			<img src="img/aeii.jpg" alt="Image" class="facultyImg">
 			<div class="description">
 				<p>
-				We are 3 year students of Automatics Control and Robotics at the Silesian University of Technology. Our greatest dream was just to do something for society. That is why, seeing the constant growth of freelancing, we decided to make life easier for many employees and employers. We believe that with our project, we will conquer the freelance market around the world. And the development plan of our website (because we still have a lot of ideas) will make our portal become a leader and pioneer in the world. By putting on us, you support youth, creativity and diligence.
+				We are 3 year students of Automatics Control and Robotics at the Silesian University of Technology. Our greatest dream was just to do something for society. That is why, seeing the constant growth of freelancing, we decided to make life easier for many employees and employers. We believe that with our project, we will conquer the freelance market around the world and the development plan of our website (because we still have a lot of ideas) will make our portal become a leader in the world. By putting on us, you support youth, creativity and diligence.
 				</p>
 			</div>
 			
