@@ -62,10 +62,15 @@
 					<h2><img src="img/email.png">macha.dawid@befree.pl</h2>
 				</div>
 			</div>
-				
 			
-		
-		
+			<div class="slide">
+				<img src="img/aeiiMap.png" alt="Image" class="mapImg">
+				<div class="overlay">
+					<div class="text">
+						<a href="https://www.google.com/maps/place/Politechnika+%C5%9Al%C4%85ska,+Wydzia%C5%82+Automatyki,+Elektroniki+i+Informatyki/@50.2887094,18.6750773,17z/data=!3m1!4b1!4m5!3m4!1s0x4711310230b29c0f:0xeab62045ee48e692!8m2!3d50.288706!4d18.677266" target="_blank">Go to map</a>
+					</div>
+				</div>
+			</div>
 		
 			<div class="description">
 				<h4><img src="img/rss.png">

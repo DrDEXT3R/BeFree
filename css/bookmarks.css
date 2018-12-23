@@ -18,6 +18,14 @@
 	max-height: 350px;
 }
 
+.mapImg {
+	width: 100%;
+	margin-left: auto;
+    margin-right: auto;
+	display: block;
+	border-radius: 8px;
+}
+
 .facultyImg {
 	margin-left: auto;
     margin-right: auto;
@@ -45,6 +53,43 @@
 
 .person {
 	margin-top: 10px;
+	margin-bottom: 50px;
 	padding-top: 30px;
 	border: 5px solid rgb(25,139,210);
+}
+
+
+/* Overlay layer on map */
+.slide {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color:  rgb(48,48,48);
+  opacity: 0.8;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.slide:hover .overlay {
+  width: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 80px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
