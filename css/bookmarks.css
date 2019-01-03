@@ -51,7 +51,7 @@
 	text-overflow: ellipsis;
 }
 
-.person {
+.person, .help {
 	margin-top: 10px;
 	margin-bottom: 50px;
 	padding-top: 30px;
@@ -92,4 +92,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+}
+
+.stepHelp {
+	min-height: 128px;
 }
