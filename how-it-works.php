@@ -48,104 +48,79 @@
 			</nav>	
 		</header>
 		<div class="container col-11 col-sm-9">
-		<!--
 			<div class="authors d-flex justify-content-between flex-column flex-md-row">
 				<div class="help col-md-6">
-					<div class="row d-flex justify-content-between flex-row">
-						<div class="col-2">
-							<img src="img/boss3.png">
-						</div>
-						<div class="textHelp col-6">
-						Employeasdad asd asdas dasa ds asdasdasdad
-						</div>
+					<div class="stepHelp d-flex">
+						<img src="img/boss.png" class="mr-2">
+						<p class="align-self-center">
+						The employer is looking for an freelancer
+						</p>
+					</div>
+					<div class="text-center">
+						<img src="img/arrow.png" class="align-center">
+					</div>
+					<div class="stepHelp d-flex">
+						<img src="img/login.png" class="mr-2">
+						<p class="align-self-center">
+						Log In / Sign Up 
+						</p>			
+					</div>
+					<div class="text-center">
+						<img src="img/arrow.png" class="align-center">
+					</div>
+					<div class="stepHelp d-flex">
+						<img src="img/offer.png" class="mr-2">
+						<p class="align-self-center">
+						Post an announcement
+						</p>
+					</div>
+					<div class="text-center">
+						<img src="img/arrow.png" class="align-center">
+					</div>
+					<div class="stepHelp d-flex">
+						<img src="img/wait.png" class="mr-2">
+						<p class="align-self-center">
+						Wait for someone to answer
+						</p>			
 					</div>
 				</div>
 				<div>&nbsp;</div>
-				<div class="help col-md-6">
-					as
+				<div class="help col-md-6 clearfix">
+					<div class="stepHelp d-flex">
+						<img src="img/freelancer.png" class="mr-2">
+						<p class="align-self-center">
+						The freelancer is looking for a job
+						</p>
+					</div>
+					<div class="text-center">
+						<img src="img/arrow.png" class="align-center">
+					</div>
+					<div class="stepHelp d-flex">
+						<img src="img/login.png" class="mr-2">
+						<p class="align-self-center">
+						Log In / Sign Up
+						</p>			
+					</div>
+					<div class="text-center">
+						<img src="img/arrow.png" class="align-center">
+					</div>
+					<div class="stepHelp d-flex">
+						<img src="img/find.png" class="mr-2">
+						<p class="align-self-center">
+						Find the best offer
+						</p>
+					</div>
+					<div class="text-center">
+						<img src="img/arrow.png" class="align-center">
+					</div>
+					<div class="stepHelp d-flex">
+						<img src="img/contact2.png" class="mr-2">
+						<p class="align-self-center">
+						Contact the employer
+						</p>			
+					</div>
 				</div>
 			</div>
-			-->
-	<!--		
-			<div class="paragraphs">
-  <div class="row">
-    <div class="span4">
-      <img style="float:left" src="img/boss3.png"/>
-      <div class="content-heading"><h3>Experienceaksdkasbdksan das dnkas ndkasnd kand knasdkn &nbsp </h3></div>
-      <p style="clear:both">Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-    </div>
-  </div>
-</div>
--->
-
-
-  
-  
-	<div class="authors d-flex justify-content-between flex-column flex-md-row">
-		<div class="help col-md-6 clearfix">
-			<div class="stepHelp">
-				<img src="img/boss.png" class="float-left mr-2">
-				<p>
-				Employeasdad asd asdas dasa ds asdasdasdad
-				</p>
-			</div>
-			<div class="text-center">
-				<img src="img/arrow.png" class="align-center">
-			</div>
-			<div class="stepHelp">
-				<img src="img/login.png" class="float-right mr-2">
-				<p>
-				Employeasdad asd asdas dasa ds asdasdasdad
-				</p>			
-			</div>
-			<div class="stepHelp">
-				<img src="img/offer.png" class="float-left mr-2">
-				<p>
-				Employeasdad asd asdas dasa ds asdasdasdad
-				</p>
-			</div>
-			<div class="stepHelp">
-				<img src="img/wait.png" class="float-right mr-2">
-				<p>
-				Employeasdad asd asdas dasa ds asdasdasdad
-				</p>			
-			</div>
-		</div>
-		<div>&nbsp;</div>
-		<div class="help col-md-6 clearfix">
-			<div class="stepHelp">
-				<img src="img/freelancer.png" class="float-left mr-2">
-				<p>
-				Employeasdad asd asdas dasa ds asdasdasdad
-				</p>
-			</div>
-			<div class="stepHelp">
-				<img src="img/login.png" class="float-right mr-2">
-				<p>
-				Employeasdad asd asdas dasa ds asdasdasdad
-				</p>			
-			</div>
-			<div class="stepHelp">
-				<img src="img/find.png" class="float-left mr-2">
-				<p>
-				Employeasdad asd asdas dasa ds asdasdasdad
-				</p>
-			</div>
-			<div class="stepHelp">
-				<img src="img/contact2.png" class="float-right mr-2">
-				<p>
-				Employeasdad asd asdas dasa ds asdasdasdad
-				</p>			
-			</div>
-		</div>
-	</div>
-  
-  
-  
-  
-  
-
-			
 		</div>
 		<!-- Log in modal -->
 		<div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="logInModalTitle" aria-hidden="true">

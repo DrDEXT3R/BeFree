@@ -51,7 +51,7 @@
 	text-overflow: ellipsis;
 }
 
-.person, .help {
+.person {
 	margin-top: 10px;
 	margin-bottom: 50px;
 	padding-top: 30px;
@@ -96,4 +96,23 @@
 
 .stepHelp {
 	min-height: 128px;
+}
+
+.stepHelp p {
+	word-wrap: break-word;
+	font-family: 'Amatic SC', cursive;
+	font-size: 30px;
+}
+
+.stepHelp img {
+		width: 128px;
+		height: 128px;
+}
+
+.help {
+	margin-top: 10px;
+	margin-bottom: 50px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border: 5px solid rgb(25,139,210);
 }
