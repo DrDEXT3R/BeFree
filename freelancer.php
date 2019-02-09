@@ -3,6 +3,7 @@
 	session_start();
 	
 	if ((!isset($_SESSION['loggedIn']))) {
+		$_SESSION['alertError'] = true;
 		header('Location: index.php');
 		exit();
 	}

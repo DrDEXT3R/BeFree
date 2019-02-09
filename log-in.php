@@ -30,6 +30,7 @@
 					
 					if ((password_verify($password,$row['password']))==true) {				
 						$_SESSION['loggedIn']=true;
+						$_SESSION['alertError']=false;
 						
 						$_SESSION['id']=$row['id'];
 						$_SESSION['login'] = $row['login'];
