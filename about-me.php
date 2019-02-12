@@ -17,8 +17,8 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css">	
 		<link rel="stylesheet" href="css/navbar.css">
-		<link rel="stylesheet" href="css/bookmarks.css">
 		<link rel="stylesheet" href="css/pop-up.css">			
+		<link rel="stylesheet" href="css/about-me.css">	
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
 	</head>
 	<body>
@@ -31,7 +31,7 @@
 				<div class="collapse navbar-collapse" id="mainmenu">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active"><a class="nav-link" href="how-it-works.php">&ensp; How it works? &ensp;</a></li>
-						<li class="nav-item active"><a class="nav-link" href="about-us.php">&ensp; About us &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="about-me.php">&ensp; About me &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="contact.php">&ensp; Contact &ensp;</a></li>				
 						<?php
 							if ((!isset($_SESSION['loggedIn']))) {
@@ -47,14 +47,47 @@
 				</div>
 			</nav>	
 		</header>
-		<div class="container col-11 col-sm-9">
-			<img src="img/aeii.jpg" alt="Image" class="facultyImg">
-			<div class="description">
-				<p>
-				We are 3 year students of Automatics Control and Robotics at the Silesian University of Technology. Our greatest dream was just to do something for society. That is why, seeing the constant growth of freelancing, we decided to make life easier for many employees and employers. We believe that with our project, we will conquer the freelance market around the world and the development plan of our website (because we still have a lot of ideas) will make our portal become a leader in the world. By putting on us, you support youth, creativity and diligence.
-				</p>
+		<div class="container containerFreelancer col-11 col-sm-9">		
+			<div class="about d-flex justify-content-between flex-column flex-lg-row">
+				<div class="block col-lg-3">
+					<div class="image"> 
+						<img src="img/author1.png" alt="img">
+					</div>
+					<div class="basicInfo d-flex justify-content-between flex-column flex-md-row flex-lg-column"> 
+						<div class="text-center">
+							<img src="img/email2.png"> Send e-mail</br>
+						</div>	
+						<div class="text-center">
+							<img src="img/github.png"> <a href="https://github.com/DrDEXT3R" target="_blank">Visit GitHub</a></br>
+						</div>	
+						<div class="text-center">
+							<img src="img/blog.png"> <a href="https://github.com/DrDEXT3R" target="_blank">Visit Blog</a>&nbsp;&nbsp;&nbsp;</br>
+						</div>	
+					</div>					
+				</div>	
+				<div class="col-lg-9 align-self-center">
+					<div class="authorName"> 
+						>&nbsp;Tomasz Strzoda&nbsp;<
+					</div> 
+					<div class="college"> 
+						 <img src="img/college.png"> University: <a href="https://www.google.pl/search?source=hp&ei=Oh5jXMXrHJKKrwTk_JqIBw&q=Silesian+University+of+Technology&btnK=Szukaj+w+Google&oq=Silesian+University+of+Technology&gs_l=psy-ab.3..35i39j0j38j0i30l7.673.7847..8087...0.0..0.127.929.12j1......0....1..gws-wiz.....0..0i131j0i67j35i304i39j0i13j0i13i30.Xof-gBC00As#btnK=Szukaj%20w%20Google" target="_blank">Silesian University of Technology</a>
+					</div>
+					<div class="description"> 
+						<p>
+						I'm a normal guy with a great dream of doing something useful for society. That's why, seeing the constant growth of freelancing, I decided to make life easier for many employees and employers. I believe that with this portal, I will conquer the freelance market around the world and the development plan of my website (because I still have a lot of ideas) will make me the leader in the world.
+						</p>
+					</div>
+				</div>
 			</div>
-			
+			<div class="slide">
+				<img src="img/aeiiMap.png" alt="Image" class="mapImg">
+				<div class="overlay">
+					<div class="text">
+						<a href="https://www.google.com/maps/place/Politechnika+%C5%9Al%C4%85ska,+Wydzia%C5%82+Automatyki,+Elektroniki+i+Informatyki/@50.2887094,18.6750773,17z/data=!3m1!4b1!4m5!3m4!1s0x4711310230b29c0f:0xeab62045ee48e692!8m2!3d50.288706!4d18.677266" target="_blank">Go to map</a>
+					</div>
+				</div>
+			</div>		
+			<div class="divider col-12"></div>
 		</div>
 		<!-- Log in modal -->
 		<div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="logInModalTitle" aria-hidden="true">
