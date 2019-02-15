@@ -19,6 +19,7 @@
 		<link rel="stylesheet" href="css/navbar.css">
 		<link rel="stylesheet" href="css/contact.css">
 		<link rel="stylesheet" href="css/pop-up.css">			
+		<link rel="stylesheet" href="css/how-it-works.css">			
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
 	</head>
 	<body>
@@ -48,79 +49,39 @@
 			</nav>	
 		</header>
 		<div class="container col-11 col-sm-9">
-			<div class="authors d-flex justify-content-between flex-column flex-md-row">
-				<div class="help col-md-6">
-					<div class="stepHelp d-flex">
-						<img src="img/boss.png" class="mr-2">
-						<p class="align-self-center">
-						The employer is looking for an freelancer
-						</p>
-					</div>
-					<div class="text-center">
-						<img src="img/arrow.png" class="align-center">
-					</div>
-					<div class="stepHelp d-flex">
-						<img src="img/login.png" class="mr-2">
-						<p class="align-self-center">
-						Log In / Sign Up 
-						</p>			
-					</div>
-					<div class="text-center">
-						<img src="img/arrow.png" class="align-center">
-					</div>
-					<div class="stepHelp d-flex">
-						<img src="img/offer.png" class="mr-2">
-						<p class="align-self-center">
-						Post an announcement
-						</p>
-					</div>
-					<div class="text-center">
-						<img src="img/arrow.png" class="align-center">
-					</div>
-					<div class="stepHelp d-flex">
-						<img src="img/wait.png" class="mr-2">
-						<p class="align-self-center">
-						Wait for someone to answer
-						</p>			
-					</div>
-				</div>
-				<div>&nbsp;</div>
-				<div class="help col-md-6 clearfix">
-					<div class="stepHelp d-flex">
-						<img src="img/freelancer.png" class="mr-2">
-						<p class="align-self-center">
-						The freelancer is looking for a job
-						</p>
-					</div>
-					<div class="text-center">
-						<img src="img/arrow.png" class="align-center">
-					</div>
-					<div class="stepHelp d-flex">
-						<img src="img/login.png" class="mr-2">
-						<p class="align-self-center">
-						Log In / Sign Up
-						</p>			
-					</div>
-					<div class="text-center">
-						<img src="img/arrow.png" class="align-center">
-					</div>
-					<div class="stepHelp d-flex">
-						<img src="img/find.png" class="mr-2">
-						<p class="align-self-center">
-						Find the best offer
-						</p>
-					</div>
-					<div class="text-center">
-						<img src="img/arrow.png" class="align-center">
-					</div>
-					<div class="stepHelp d-flex">
-						<img src="img/contact2.png" class="mr-2">
-						<p class="align-self-center">
-						Contact the employer
-						</p>			
-					</div>
-				</div>
+			<p class="text-center">
+				1. Are you looking for an freelancer or a job?
+			</p>
+			<div class="image col-md-10 rounded mx-auto d-block"> 
+				<img src="img/how-it-works1.jpg" alt="img">
 			</div>
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<p class="text-center">
+				2. First log in to your account or create one
+			</p>
+			<div class="image col-md-10 rounded mx-auto d-block"> 
+				<img src="img/how-it-works2.jpg" alt="img">
+			</div>
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<p class="text-center">
+				3. Now you can easily post an announcement or find one
+			</p>
+			<div class="image col-md-10 rounded mx-auto d-block"> 
+				<img src="img/how-it-works3.jpg" alt="img">
+			</div>
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<p class="text-center">
+				4. Wait for someone to answer or do it yourself
+			</p>
+			<div class="image col-md-10 rounded mx-auto d-block"> 
+				<img src="img/how-it-works4.jpg" alt="img">
+			</div>			
 		</div>
 		<!-- Log in modal -->
 		<div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="logInModalTitle" aria-hidden="true">
@@ -163,9 +124,7 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						
-							<img src="img/signup.png" alt="Image" class="avatar">
-						
+						<img src="img/signup.png" alt="Image" class="avatar">
 						<form action="sign-up.php" method="post">
 							<input class="popUpInput" type="text" placeholder="Login" value="<?php
 								if (isset($_SESSION['fr_login'])) {
