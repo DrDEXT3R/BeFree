@@ -1,7 +1,7 @@
 <?php
 	
 	session_start();
-	
+
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +17,10 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css">	
 		<link rel="stylesheet" href="css/navbar.css">
-		<link rel="stylesheet" href="css/bookmarks.css">
+		<link rel="stylesheet" href="css/contact.css">
 		<link rel="stylesheet" href="css/pop-up.css">			
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	</head>
 	<body>
 		<header>
@@ -48,39 +49,84 @@
 			</nav>	
 		</header>
 		<div class="container col-11 col-sm-9">
-		
-			<div class="authors d-flex justify-content-between flex-column flex-md-row">
-				<div class="person col-md-6">
-					<img src="img/author1.png" alt="Image" class="authorImg">
-					<h1>Tomasz Strzoda</h1>
-					<h2><img src="img/email.png">strzoda.tomasz@befree.pl</h2>
-				</div>
-				<div>&nbsp;</div>
-				<div class="person col-md-6">
-					<img src="img/author1.png" alt="Image" class="authorImg">
-					<h1>Dawid Macha</h1>
-					<h2><img src="img/email.png">macha.dawid@befree.pl</h2>
-				</div>
-			</div>
-			
-			<div class="slide">
-				<img src="img/aeiiMap.png" alt="Image" class="mapImg">
-				<div class="overlay">
-					<div class="text">
-						<a href="https://www.google.com/maps/place/Politechnika+%C5%9Al%C4%85ska,+Wydzia%C5%82+Automatyki,+Elektroniki+i+Informatyki/@50.2887094,18.6750773,17z/data=!3m1!4b1!4m5!3m4!1s0x4711310230b29c0f:0xeab62045ee48e692!8m2!3d50.288706!4d18.677266" target="_blank">Go to map</a>
+			<form class="needs-validation" novalidate action="send.php" method="post" enctype="multipart/form-data">
+				<div class="form-group row">
+					<img src="img/signature.png">
+					<label for="formName" class="name">Name</label>
+					<input type="text" class="form-control col-xl-9 right" id="formName" name="name" placeholder="Enter your name" required>
+					<div class="invalid-feedback col-xl-9 right">
+						You must enter your name
 					</div>
 				</div>
-			</div>
-		
-			<div class="description">
-				<h4><img src="img/rss.png">
-				More information about our portal can be found on
-				<a href="https://329elearning.aei.polsl.pl/tiwordpress2018/s114/">
-				our blog.
-				</a></h4>
-			</div>
-	
+				<div class="form-group row">
+					<img src="img/send.png">
+					<label for="formEmail" class="name">Send to</label>
+					<select class="form-control col-xl-9 right" id="formEmail" name="recipientID">
+						<option value="1">Tomasz Strzoda - administrator</option>
+					</select>
+				</div>
+				<div class="form-group row">
+					<img src="img/message.png">
+					<label for="formMessage" class="name">Message</label>
+					<textarea class="form-control col-xl-9 right" id="formMessage" name="message" rows="3" placeholder="Type your message" required></textarea>
+					<div class="invalid-feedback col-xl-9 right">
+						The message field can not be empty
+					</div>
+				</div>
+				<div class="float-sm-right">
+					<button type="submit" class="btn btn-primary">Submit</button>
+					<button type="reset" class="btn btn-primary">Reset</button>
+				</div>
+			</form>
+			<script>
+				// Example starter JavaScript for disabling form submissions if there are invalid fields
+				(function() {
+					'use strict';
+					window.addEventListener('load', function() {
+						// Fetch all the forms we want to apply custom Bootstrap validation styles to
+						var forms = document.getElementsByClassName('needs-validation');
+						// Loop over them and prevent submission
+						var validation = Array.prototype.filter.call(forms, function(form) {
+							form.addEventListener('submit', function(event) {
+								if (form.checkValidity() === false) {
+									event.preventDefault();
+									event.stopPropagation();
+								}
+								form.classList.add('was-validated');
+							}, false);
+						});
+					}, false);
+				})();
+			</script>
+			<div class="divider col-12"></div>
 		</div>
+		<?php
+			if (isset($_SESSION['showSendEmailModal'])) {
+				echo "<script>$(window).load(function(){
+						$('#sendEmailModal').modal('show');
+					});</script>";
+				$_SESSION['showSendEmailModal'] = false;
+					
+			}
+		?>
+		<!-- Send email modal -->
+		<div class="modal fade" id="sendEmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">The status of sending an email</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				<?php
+					echo $_SESSION['sendEmailInfo'];
+				?>
+			  </div>
+			</div>
+		  </div>
+		</div>		
 		<!-- Log in modal -->
 		<div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="logInModalTitle" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered modal-sm" role="document">

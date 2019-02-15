@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css">	
 		<link rel="stylesheet" href="css/navbar.css">
-		<link rel="stylesheet" href="css/bookmarks.css">
+		<link rel="stylesheet" href="css/contact.css">
 		<link rel="stylesheet" href="css/pop-up.css">			
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
 	</head>

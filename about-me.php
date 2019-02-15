@@ -55,7 +55,7 @@
 					</div>
 					<div class="basicInfo d-flex justify-content-between flex-column flex-md-row flex-lg-column"> 
 						<div class="text-center">
-							<img src="img/email2.png"> Send e-mail</br>
+							<img src="img/email2.png"> <a href="contact.php">Send e-mail</a></br>
 						</div>	
 						<div class="text-center">
 							<img src="img/github.png"> <a href="https://github.com/DrDEXT3R" target="_blank">Visit GitHub</a></br>

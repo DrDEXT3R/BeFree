@@ -1,0 +1,62 @@
+.name {
+	min-width:180px; 
+	max-width:180px; 
+	max-height:48px;
+	background-image: url(../img/brush.png);
+	color: white;
+	text-align: center;
+}
+
+.form-group img {
+	max-width:48px; 
+	max-height:48px;
+}
+
+input {
+	height: 48px;
+}
+
+input[type=text], .form-group textarea, .form-control {
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 20px;
+	font-family: normal;
+	resize: vertical;
+}
+
+.btn {
+    color: white;
+    border: none;
+    cursor: pointer;
+	min-width: 120px; 
+	max-width: 120px; 
+	min-height: 50px;
+	max-height: 50px;
+	padding: 0px;
+	font-size: 35px;
+	font-weight: bold;
+	font-family: 'Amatic SC', cursive;	
+	background-color: DodgerBlue;
+}
+
+.row {
+	min-height:60px;
+}
+
+.container {
+	padding: 40px;
+}
+
+.row input, .row select {
+	height: 48px;
+}
+
+.divider {
+	margin: 0;
+	padding: 0;
+	height: 10px;
+	clear: both;
+	overflow: hidden;
+}
+
