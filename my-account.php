@@ -25,7 +25,6 @@
 		<link rel="stylesheet" href="css/navbar.css">	
 		<link rel="stylesheet" href="css/pop-up.css">	
 		<link rel="stylesheet" href="css/my-account.css">	
-		<script src="code.js"></script>	
 		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
@@ -109,7 +108,7 @@
 		
 		<?php
 		
-			if ($_SESSION['showChangeEmailModal'] == true) {
+			if ( isset($_SESSION['showChangeEmailModal']) ) {
 				echo "<script>$(window).load(function(){
 						$('#changeEmailModal').modal('show');
 					});</script>";
@@ -117,7 +116,7 @@
 					
 			}
 			
-			if ($_SESSION['showChangePasswordModal'] == true) {
+			if ( isset($_SESSION['showChangePasswordModal']) ) {
 				echo "<script>$(window).load(function(){
 						$('#changePasswordModal').modal('show');
 					});</script>";

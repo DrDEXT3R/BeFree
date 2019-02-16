@@ -6,9 +6,6 @@
 		header('Location: action.php');
 		exit();
 	}
-	
-	$_SESSION['showChangeEmailModal'] = false;
-	$_SESSION['showChangePasswordModal'] = false;
 
 ?>
 
@@ -27,7 +24,6 @@
 		<link rel="stylesheet" href="css/style.css">	
 		<link rel="stylesheet" href="css/navbar.css">	
 		<link rel="stylesheet" href="css/pop-up.css">	
-		<script src="code.js"></script>	
 		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
@@ -196,18 +192,14 @@
 					</h5>
 				</div>
 				<div class="modal-body" align="center">
-					It's visible only to 
-					<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#logInModal">logged in</a> 
-					users.<br><br>
-					Don't have an account yet?<br>
-					<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#signUpModal">Create account</a>
+					It's visible only to logged in users.
 					<?php
 						if (!(isset($_SESSION['loggedIn'])) && isset($_SESSION['alertError'])) {
 							echo "<script>$(window).load(function(){
 										$('#alertModal').modal('show');
 								});</script>";
 						}
-					?>					
+					?>	
 				</div>
 			</div>
 		  </div>

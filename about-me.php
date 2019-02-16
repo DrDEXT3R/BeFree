@@ -19,6 +19,7 @@
 		<link rel="stylesheet" href="css/navbar.css">
 		<link rel="stylesheet" href="css/pop-up.css">			
 		<link rel="stylesheet" href="css/about-me.css">	
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
 	</head>
 	<body>
@@ -31,7 +32,7 @@
 				<div class="collapse navbar-collapse" id="mainmenu">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active"><a class="nav-link" href="how-it-works.php">&ensp; How it works? &ensp;</a></li>
-						<li class="nav-item active"><a class="nav-link" href="about-me.php">&ensp; About me &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="about-me.php">&ensp; <u>About me</u> &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="contact.php">&ensp; Contact &ensp;</a></li>				
 						<?php
 							if ((!isset($_SESSION['loggedIn']))) {

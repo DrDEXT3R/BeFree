@@ -12,11 +12,11 @@
 	max-height:48px;
 }
 
-input {
+.form-control input {
 	height: 48px;
 }
 
-input[type=text], .form-group textarea, .form-control {
+.form-control input[type=text], .form-group textarea, .form-control {
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;

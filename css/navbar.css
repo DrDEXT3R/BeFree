@@ -28,7 +28,7 @@
 	line-height: normal;
 	text-align: center;	
 }
-.navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > .active > u {
 	text-decoration: underline;
 }
 /* Mobile version */

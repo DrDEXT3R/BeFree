@@ -10,10 +10,10 @@
 .offer {
 	background-image: url("../img/foreground.png");
 	float: right;
-	border: 10px solid rgb(25,139,210);
+	border: 10px solid DodgerBlue;
 }
 .offer font {
-	color: rgb(25,139,210);
+	color: DodgerBlue;
 }
 
 .image {

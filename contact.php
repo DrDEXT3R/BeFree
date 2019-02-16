@@ -17,8 +17,9 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css">	
 		<link rel="stylesheet" href="css/navbar.css">
-		<link rel="stylesheet" href="css/contact.css">
-		<link rel="stylesheet" href="css/pop-up.css">			
+		<link rel="stylesheet" href="css/pop-up.css">
+		<link rel="stylesheet" href="css/contact.css">	
+		<script src='https://www.google.com/recaptcha/api.js'></script>		
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
 		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	</head>
@@ -33,7 +34,7 @@
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active"><a class="nav-link" href="how-it-works.php">&ensp; How it works? &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="about-me.php">&ensp; About me &ensp;</a></li>
-						<li class="nav-item active"><a class="nav-link" href="contact.php">&ensp; Contact &ensp;</a></li>				
+						<li class="nav-item active"><a class="nav-link" href="contact.php">&ensp; <u>Contact</u> &ensp;</a></li>				
 						<?php
 							if ((!isset($_SESSION['loggedIn']))) {
 								echo '<li class="nav-item active"><a class="nav-link" href="#" data-toggle="modal" data-target="#logInModal">&ensp; Log in &ensp;</a></li>

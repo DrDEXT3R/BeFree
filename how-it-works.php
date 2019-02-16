@@ -17,9 +17,9 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css">	
 		<link rel="stylesheet" href="css/navbar.css">
-		<link rel="stylesheet" href="css/contact.css">
 		<link rel="stylesheet" href="css/pop-up.css">			
-		<link rel="stylesheet" href="css/how-it-works.css">			
+		<link rel="stylesheet" href="css/how-it-works.css">	
+		<script src='https://www.google.com/recaptcha/api.js'></script>		
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
 	</head>
 	<body>
@@ -31,7 +31,7 @@
 				</button>
 				<div class="collapse navbar-collapse" id="mainmenu">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="how-it-works.php">&ensp; How it works? &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="how-it-works.php">&ensp; <u>How it works?</u> &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="about-me.php">&ensp; About me &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="contact.php">&ensp; Contact &ensp;</a></li>				
 						<?php
@@ -48,7 +48,7 @@
 				</div>
 			</nav>	
 		</header>
-		<div class="container col-11 col-sm-9">
+		<div class="container col-11 col-sm-9">		
 			<p class="text-center">
 				1. Are you looking for an freelancer or a job?
 			</p>
@@ -124,7 +124,9 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						<img src="img/signup.png" alt="Image" class="avatar">
+						
+							<img src="img/signup.png" alt="Image" class="avatar">
+						
 						<form action="sign-up.php" method="post">
 							<input class="popUpInput" type="text" placeholder="Login" value="<?php
 								if (isset($_SESSION['fr_login'])) {

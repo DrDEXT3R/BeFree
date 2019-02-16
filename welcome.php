@@ -37,7 +37,6 @@
 		<meta http-equiv="X-Ua-Compatible" content="IE-edge,chrome=1">
 		<link rel="stylesheet" href="css/main.css">	
 		<link rel="stylesheet" href="css/loginPopUp.css">	
-		<script src="code.js"></script>	
 	</head>
 	<body>
 		Thank you for registering to the beFree website! Now you can log in to your account.
