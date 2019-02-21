@@ -199,7 +199,13 @@
 										}
 									?> 
 									required> 
-							<label class="form-check-label checkbox">Accept the rules</label>
+							<label class="form-check-label checkbox">
+								<a href="rules.html" 
+									onclick="window.open('rules.html', 'newwindow', 'width=300,height=250'); 
+									return false;">
+										Accept the rules
+								</a>
+							</label>
 							<div class="invalid-feedback"></div>
 							<?php
 								if (isset($_SESSION['e_rules'])) {
