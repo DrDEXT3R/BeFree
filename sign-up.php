@@ -46,7 +46,8 @@
 		}
 		
 		//Bot or not
-		$secret = "6LeK63QUAAAAAFG4ZQ9mkBxWL3PSSaWaFOBpXCB2";
+		include_once "captcha.php";
+		$secret = getKey(2); //get the secret key from DB
 		$check = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
 		$answer = json_decode($check);
 		if ($answer->success==false) {
@@ -63,7 +64,7 @@
 			$_SESSION['fr_rules'] = true;
 
 		
-		require_once "connect.php";
+		require "connect.php";
 		mysqli_report(MYSQLI_REPORT_STRICT);
 		try {
 			$connection	= new mysqli($host, $db_user, $db_password, $db_name);

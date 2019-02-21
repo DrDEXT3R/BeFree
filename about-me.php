@@ -9,9 +9,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Freelance jobs</title>
+		<title>BeFree</title>
 		<meta name="description" content="Job board for freelancers and employers. Find for FREE commissions and offers of remote work.">
-		<meta name="keywords" content="freelancer, job, work, offers, commissions, remote">
+		<meta name="keywords" content="befree, freelancer, job, work, offers, commissions, remote">
 		<meta name="author" content="Tomasz Strzoda">		
 		<meta http-equiv="X-Ua-Compatible" content="IE-edge,chrome=1">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -214,7 +214,12 @@
 								}
 							?>
 							<!-- reCAPTCHA -->
-							<div class="g-recaptcha" align="center" data-sitekey="6LeK63QUAAAAADrg75dHw0aAN58FuxoNMmk56rFn"></div>
+							<div class="g-recaptcha" align="center" data-sitekey="<?php
+																						require_once "captcha.php";
+																						echo getKey(1); //get the site key from DB
+																					?>
+
+							"></div>
 							<?php
 								if (isset($_SESSION['e_bot'])) {
 									echo '<div class="error">'.$_SESSION['e_bot'].'</div>';

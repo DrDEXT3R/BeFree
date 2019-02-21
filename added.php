@@ -34,9 +34,9 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Freelance jobs</title>
+		<title>BeFree</title>
 		<meta name="description" content="Job board for freelancers and employers. Find for FREE commissions and offers of remote work.">
-		<meta name="keywords" content="freelancer, job, work, offers, commissions, remote">
+		<meta name="keywords" content="befree, freelancer, job, work, offers, commissions, remote">
 		<meta name="author" content="Tomasz Strzoda">		
 		<meta http-equiv="X-Ua-Compatible" content="IE-edge,chrome=1">
 		<link rel="stylesheet" href="css/main.css">	
