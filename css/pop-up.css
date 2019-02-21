@@ -9,7 +9,7 @@ form {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-	font-size:16px;
+    font-size:16px;
 }
 
 .popUpButton {
@@ -36,4 +36,8 @@ form {
 
 .modal {
 	z-index: 100001 !important; /*make pop-up on foreground*/
+}
+
+.checkbox {
+    margin-bottom: 10px;
 }

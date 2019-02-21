@@ -79,7 +79,7 @@
 						}
 						catch (Exception $e) {
 							echo '<span style="color:red;">Server Not Found! Please try again later.</span>';
-							echo '<br/>Info: '.$e; //comment this before last release - info about exception for developer
+							//echo '<br/>Info: '.$e; //comment this before last release - info about exception for developer
 						}
 					
 					?>			
@@ -127,11 +127,11 @@
 		?>
 		
 		<!-- Change e-mail address modal -->
-		<div class="modal fade" id="changeEmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal fade" id="changeEmailModal" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
 		  <div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 			  <div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLongTitle">Change e-mail address</h5>
+				<h5 class="modal-title" id="modalLongTitle">Change e-mail address</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				  <span aria-hidden="true">&times;</span>
 				</button>
@@ -146,11 +146,11 @@
 		</div>
 		
 		<!-- Change password modal -->
-		<div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
 		  <div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 			  <div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLongTitle">Change password</h5>
+				<h5 class="modal-title" id="modalLongTitle">Change password</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				  <span aria-hidden="true">&times;</span>
 				</button>

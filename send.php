@@ -43,7 +43,7 @@
 	}
 	catch (Exception $e) {
 		echo '<span style="color:red;">Server Not Found! Please try again later.</span>';
-		echo '<br/>Info: '.$e; //comment this before last release - info about exception for developer
+		//echo '<br/>Info: '.$e; //comment this before last release - info about exception for developer
 	}
 	
 	$_SESSION['showSendEmailModal'] = true;

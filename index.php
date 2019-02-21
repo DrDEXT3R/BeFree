@@ -74,8 +74,10 @@
 					<div class="modal-body">
 						<form action="log-in.php" method="post"> 
 							<img src="img/avatar.png" alt="Avatar" class="avatar">
-							<input class="popUpInput" type="text" placeholder="Enter login" name="login">
-							<input class="popUpInput" type="password" placeholder="Enter password" name="password">
+							<input class="form-control form-control-lg popUpInput" type="text" placeholder="Enter login" name="login" required>
+							<div class="invalid-feedback"></div>
+							<input class="form-control form-control-lg popUpInput" type="password" placeholder="Enter password" name="password" required>
+							<div class="invalid-feedback"></div>
 							<button class="popUpButton" type="submit">Log in</button>
 							<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#signUpModal">Create account</a>	
 							<?php
@@ -101,65 +103,82 @@
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
-					<div class="modal-body">
-						
-						<img src="img/signup.png" alt="Image" class="avatar">
-						
-						<form action="sign-up.php" method="post">
-							<input class="popUpInput" type="text" placeholder="Login" value="<?php
-								if (isset($_SESSION['fr_login'])) {
-									echo $_SESSION['fr_login'];
-									unset($_SESSION['fr_login']);
-								}
-							?>" name="login"/>
-							<?php
-								if (isset($_SESSION['e_login'])) {
-									echo '<div class="error">'.$_SESSION['e_login'].'</div>';
-									unset($_SESSION['e_login']);
-								}
-							?>
-							<input class="popUpInput" type="text" placeholder="E-mail" value="<?php
-								if (isset($_SESSION['fr_email'])) {
-									echo $_SESSION['fr_email'];
-									unset($_SESSION['fr_email']);
-								}
-							?>" name="email"/>
-							<?php
-								if (isset($_SESSION['e_email'])) {
-									echo '<div class="error">'.$_SESSION['e_email'].'</div>';
-									unset($_SESSION['e_email']);
-								}
-							?>
-							<input class="popUpInput" type="password" placeholder="Password" value="<?php
-								if (isset($_SESSION['fr_password1']) ) {
-									echo $_SESSION['fr_password1'];
-									unset($_SESSION['fr_password1']);
-								}
-							?>" name="password1"/>
-							<?php
-								if (isset($_SESSION['e_password'])) {
-									echo '<div class="error">'.$_SESSION['e_password'].'</div>';
-									unset($_SESSION['e_password']);
-								}
-							?>
-							<input class="popUpInput" type="password" placeholder="Repeat password:" value="<?php
-								if (isset($_SESSION['fr_password2'])) {
-									echo $_SESSION['fr_password2'];
-									unset($_SESSION['fr_password2']);
-								}
-							?>" name="password2"/>
-							<label><input type="checkbox" name="rules" <?php
-								if (isset($_SESSION['fr_rules'])) {
-									echo "checked";
-									unset($_SESSION['fr_rules']);
-								}
-							?>/>Accept the rules</label>
+					<div class="modal-body">	
+						<img src="img/signup.png" alt="Image" class="avatar">	
+						<form class="needs-validation" novalidate action="sign-up.php" method="post">
+							<div>
+								<!-- Login -->
+								<input type="text" class="form-control form-control-lg popUpInput" placeholder="Login" 
+								value= "<?php
+											if (isset($_SESSION['fr_login'])) {
+												echo $_SESSION['fr_login'];
+												unset($_SESSION['fr_login']);
+											}
+										?>" name="login" required>
+								<div class="invalid-feedback"></div>
+								<?php
+									if (isset($_SESSION['e_login'])) {
+										echo '<div class="error">'.$_SESSION['e_login'].'</div>';
+										unset($_SESSION['e_login']);
+									}
+								?>
+								<!-- E-mail -->
+								<input type="text" class="form-control form-control-lg popUpInput" placeholder="E-mail" 
+								value= "<?php
+											if (isset($_SESSION['fr_email'])) {
+												echo $_SESSION['fr_email'];
+												unset($_SESSION['fr_email']);
+											}
+										?>" name="email" required>
+								<div class="invalid-feedback"></div>
+								<?php
+									if (isset($_SESSION['e_email'])) {
+										echo '<div class="error">'.$_SESSION['e_email'].'</div>';
+										unset($_SESSION['e_email']);
+									}
+								?>
+								<!-- Password -->
+								<input type="password" class="form-control form-control-lg popUpInput" placeholder="Password" 
+								value= "<?php
+											if (isset($_SESSION['fr_password1']) ) {
+												echo $_SESSION['fr_password1'];
+												unset($_SESSION['fr_password1']);
+											}
+										?>" name="password1" required>
+								<div class="invalid-feedback"></div>
+								<?php
+									if (isset($_SESSION['e_password'])) {
+										echo '<div class="error">'.$_SESSION['e_password'].'</div>';
+										unset($_SESSION['e_password']);
+									}
+								?>
+								<!-- Repeat password -->
+								<input type="password" class="form-control form-control-lg popUpInput" placeholder="Repeat password" 
+								value= "<?php
+											if (isset($_SESSION['fr_password2'])) {
+												echo $_SESSION['fr_password2'];
+												unset($_SESSION['fr_password2']);
+											}
+										?>" name="password2" required>
+							</div>
+							<!-- Rules -->
+							<input class="form-check-input" type="checkbox" name="rules" 
+									<?php
+										if (isset($_SESSION['fr_rules'])) {
+											echo "checked";
+											unset($_SESSION['fr_rules']);
+										}
+									?> 
+									required> 
+							<label class="form-check-label checkbox">Accept the rules</label>
+							<div class="invalid-feedback"></div>
 							<?php
 								if (isset($_SESSION['e_rules'])) {
 									echo '<div class="error">'.$_SESSION['e_rules'].'</div>';
 									unset($_SESSION['e_rules']);
 								}
 							?>
+							<!-- reCAPTCHA -->
 							<div class="g-recaptcha" align="center" data-sitekey="6LeK63QUAAAAADrg75dHw0aAN58FuxoNMmk56rFn"></div>
 							<?php
 								if (isset($_SESSION['e_bot'])) {
@@ -167,6 +186,7 @@
 									unset($_SESSION['e_bot']);
 								}
 							?>
+							<!-- Submit button -->
 							<input class="popUpButton" type="submit" value="Register"/>
 							<?php
 								if (isset($_SESSION['signUpError'])) {
@@ -176,12 +196,32 @@
 								}
 							?>
 						</form>
+						<script>
+							// Starter JavaScript for disabling form submissions if there are invalid fields
+							(function() {
+							'use strict';
+							window.addEventListener('load', function() {
+								// Fetch all the forms we want to apply custom Bootstrap validation styles to
+								var forms = document.getElementsByClassName('needs-validation');
+								// Loop over them and prevent submission
+								var validation = Array.prototype.filter.call(forms, function(form) {
+									form.addEventListener('submit', function(event) {
+										if (form.checkValidity() === false) {
+											event.preventDefault();
+											event.stopPropagation();
+										}
+										form.classList.add('was-validated');
+									}, false);
+								});
+							}, false);
+							})();
+						</script>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- Alert modal -->
-		<div class="modal fade bd-example-modal-sm" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModalTitle" aria-hidden="true">
+		<div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModalTitle" aria-hidden="true">
 		  <div class="modal-dialog modal-sm">
 			<div class="modal-content">
 				<div class="modal-header">
