@@ -14,4 +14,4 @@ The current version of the website can be seen here: http://befree.itlookssoeasy
 * **Friend from college** - help when creating version 1.0
 
 ## License
-This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](https://github.com/DrDEXT3R/BeFree/blob/master/LICENSE) file for details
