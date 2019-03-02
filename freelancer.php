@@ -13,13 +13,33 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!-- Overview -->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>BeFree</title>
+		<title>BeFree - Freelancer</title>
 		<meta name="description" content="Job board for freelancers and employers. Find for FREE commissions and offers of remote work.">
 		<meta name="keywords" content="befree, freelancer, job, work, offers, commissions, remote">
 		<meta name="author" content="Tomasz Strzoda">		
 		<meta http-equiv="X-Ua-Compatible" content="IE-edge,chrome=1">
+		<!-- Icons for Android devices -->
+		<link rel="icon" type="image/png" href="img/favicon/favicon.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="img/favicon/favicon.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="img/favicon/favicon.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="img/favicon/favicon.png" sizes="160x160" />
+		<link rel="icon" type="image/png" href="img/favicon/favicon.png" sizes="196x196" />
+		<!-- Icons for Apple devices -->
+		<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon.png" />
+		<!-- Icon for Windows -->
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="img/favicon/mstile-150x150.png">
+		<!-- Style sheets and more -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css">	
 		<link rel="stylesheet" href="css/navbar.css">	
@@ -35,7 +55,7 @@
 				</button>
 				<div class="collapse navbar-collapse" id="mainmenu">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="how-it-works.php">&ensp; How it works? &ensp;</a></li>
+						<li class="nav-item active"><a class="nav-link" href="how-it-works.php">&ensp; How it works &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="about-me.php">&ensp; About me &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="contact.php">&ensp; Contact &ensp;</a></li>
 						<li class="nav-item active"><a class="nav-link" href="my-account.php">&ensp; My account &ensp;</a></li>
@@ -81,16 +101,22 @@
 													<img src="uploads/'.$imgName.'" alt="img">
 												</div>		
 												<div class="basicInfo"> 
-													<img src="img/money.png"> Remuneration: <font>'.$row['price'].'$</font></br> 
-													<img src="img/phone.png"> Phone: <font>'.$row['phone'].'</font></br>
-													<img src="img/email.png"> E-mail: <font>'.$row['email'].'</font></br>
+													<div class="text-center">
+														<img src="img/money.png"> Remuneration: <font>'.$row['price'].'$</font></br> 
+													</div>
+													<div class="text-center">
+														<img src="img/phone.png"> Phone: <font>'.$row['phone'].'</font></br>
+													</div>
+													<div class="text-center">
+														<img src="img/email.png"> E-mail: <font>'.$row['email'].'</font></br>
+													</div>
 												</div>
 											</div>										
-											<div class="date col-12 col-md-9">
+											<div class="date col-12 col-md-9 text-center text-center text-md-right">
 												'.$formattedDate.'
 											</div>										
 											<div class="employer col-12 col-md-9"> 
-												> '.$row['employer'].' < </br>
+												>&nbsp;'.$row['employer'].'&nbsp;< </br>
 											</div> 
 											<div class="technique col-12 col-md-4">
 												<img src="img/tools.png"> Technology: <font>'.$row['technique'].'</font></br> 
