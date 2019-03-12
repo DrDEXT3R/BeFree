@@ -47,10 +47,20 @@
 		
 		//Bot or not
 		include_once "captcha.php";
-		$secret = getKey(2); //get the secret key from DB
-		$check = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
-		$answer = json_decode($check);
-		if ($answer->success==false) {
+		$secret = getKey(2); //get the secret key from DB                
+		$post_data = "secret=".$secret."&response=".$_POST['g-recaptcha-response']."&remoteip=".$_SERVER['REMOTE_ADDR'] ;
+		$ch = curl_init();  
+		curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+		curl_setopt($ch, CURLOPT_POST, true);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, 
+					array('Content-Type: application/x-www-form-urlencoded; charset=utf-8', 
+					'Content-Length: ' . strlen($post_data)));
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data); 
+		$googresp = curl_exec($ch);       
+		$decgoogresp = json_decode($googresp);
+		curl_close($ch);
+		if ($decgoogresp->success == true) {
 			$succVal=false;
 			$_SESSION['e_bot']='<span style="color:red">*Please confirm you are not a robot!"</span>';
 		}

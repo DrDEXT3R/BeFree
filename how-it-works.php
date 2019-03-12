@@ -213,10 +213,11 @@
 									?> 
 									required> 
 							<label class="form-check-label checkbox">
+								Accept
 								<a href="rules.html" 
 									onclick="window.open('rules.html', 'newwindow', 'width=300,height=250'); 
 									return false;">
-										Accept the rules
+										 the rules
 								</a>
 							</label>
 							<div class="invalid-feedback"></div>
