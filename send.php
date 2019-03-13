@@ -10,10 +10,9 @@
 			throw new Exception(mysqli_connect_errno());
 		}
 		else {
-			
 			$name = $_POST['name'];
 			$recipientID=$_POST['recipientID'];
-			$message = $_POST['message'];
+			$message = $_POST['message']."\n\nFrom: ".$name;
 			
 			if( $result = $connection->query("SELECT * FROM recipients WHERE id='$recipientID'") ) {
 				$no_of_users = $result->num_rows;
@@ -29,8 +28,8 @@
 			$connection->close();
 			
 			$subject = 'Message from BeFree website';
-			$headers = 'From: webmaster@example.com' . "\r\n" .
-					   'Reply-To: webmaster@example.com' . "\r\n" .
+			$headers = 'From: admin@befree.itlookssoeasy.com' . "\r\n" .
+					   'Reply-To: admin@befree.itlookssoeasy.com' . "\r\n" .
 					   'X-Mailer: PHP/' . phpversion();
 			
 			if( mail($recipient, $subject, $message, $headers) ) { //mail() doesn't work in local server

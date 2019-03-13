@@ -288,7 +288,7 @@
 							<!-- Submit button -->
 							<input class="popUpButton" type="submit" value="Register"/>
 							<?php
-								if (isset($_SESSION['signUpError'])) {
+								if (isset($_SESSION['signUpError']) && (!isset($_SESSION['loggedIn']))) {
 									echo "<script>$(window).load(function(){
 												$('#signUpModal').modal('show');
 										});</script>";
