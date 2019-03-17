@@ -40,6 +40,15 @@
 		<link rel="stylesheet" href="css/pop-up.css">			
 		<link rel="stylesheet" href="css/about-me.css">	
 		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136379266-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+		
+			gtag('config', 'UA-136379266-2');
+		</script>
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
 	</head>
 	<body>
