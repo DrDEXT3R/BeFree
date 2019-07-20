@@ -104,6 +104,27 @@
 					if( $connection->query("INSERT INTO accounts VALUES(NULL,'$login','$password_hash','$email')") ) {
 						$_SESSION['succRegistration'] = true;
 						$_SESSION['signUpError'] = false;
+
+						//send an email informing the administrator (id=1) about creating a new account
+						if( $result = $connection->query("SELECT * FROM recipients WHERE id=1") ) {
+							$no_of_users = $result->num_rows;
+							if ($no_of_users>0) {
+								$row = $result->fetch_assoc();
+								$recipient = $row['email'];
+							}
+						}
+						else {
+							throw new Exception($connection->error);
+						}
+						$subject =	'Message from BeFree website';
+						$message = 	'Someone has created a new account!' . "\r\n\n" . 
+									'Login: ' . $login . "\r\n" .
+									'E-mail: ' . $email . "\r\n";
+						$headers =	'From: admin@befree.itlookssoeasy.com' . "\r\n" .
+									'Reply-To: admin@befree.itlookssoeasy.com' . "\r\n" .
+									'X-Mailer: PHP/' . phpversion();
+						mail($recipient, $subject, $message, $headers);		
+
 						header('Location: welcome.php');
 					}
 					else {

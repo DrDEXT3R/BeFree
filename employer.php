@@ -93,6 +93,28 @@
 					$fileName = $_FILES["fileToUpload"]["name"];
 					if( $connection->query("INSERT INTO jobs VALUES(NULL,'$price','$phone','$email','$technique','$employer','$description','$location','$fileName',now())") ) {
 						$_SESSION['succRegistration'] = true;
+
+						//send an email informing the administrator (id=1) about adding a new job offer
+						if( $result = $connection->query("SELECT * FROM recipients WHERE id=1") ) {
+							$no_of_users = $result->num_rows;
+							if ($no_of_users>0) {
+								$row = $result->fetch_assoc();
+								$recipient = $row['email'];
+							}
+						}
+						else {
+							throw new Exception($connection->error);
+						}
+						$subject =	'Message from BeFree website';
+						$message = 	'Someone has added a new job offer!' . "\r\n\n" . 
+									'Employer: ' . $employer . "\r\n" .
+									'E-mail: ' . $email . "\r\n" .
+									'Phone: ' . $phone . "\r\n";
+						$headers =	'From: admin@befree.itlookssoeasy.com' . "\r\n" .
+									'Reply-To: admin@befree.itlookssoeasy.com' . "\r\n" .
+									'X-Mailer: PHP/' . phpversion();
+						mail($recipient, $subject, $message, $headers);		
+
 						include 'upload.php';
 					}
 					else {
