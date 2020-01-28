@@ -5,6 +5,9 @@ BeFree is a website that will facilitate the work of freelancers. This portal wi
 The current version of the website can be seen here: http://befree.itlookssoeasy.com/
 
 ## Built With
+* [HTML](https://html.spec.whatwg.org/multipage/) - The language for describing the structure of Web pages
+* [CSS](https://www.w3.org/Style/CSS/specs.en.html) - The language for describing the presentation of Web pages, including colors, layout, and fonts
+* [PHP](https://www.php.net/docs.php) - General-purpose scripting language that is especially suited to web development
 * [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/) - The web framework used
 * [Animate.css](https://github.com/daneden/animate.css/blob/master/README.md) - CSS with a bunch of cool animations
 * [MySQL](https://dev.mysql.com/doc/) - Relational database management system
