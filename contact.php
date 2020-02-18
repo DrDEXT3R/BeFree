@@ -38,7 +38,8 @@
 		<link rel="stylesheet" href="css/style.css">	
 		<link rel="stylesheet" href="css/navbar.css">
 		<link rel="stylesheet" href="css/pop-up.css">
-		<link rel="stylesheet" href="css/contact.css">	
+		<link rel="stylesheet" href="css/contact.css">
+		<script src="enable-sign-up-btn.js"></script>	
 		<script src='https://www.google.com/recaptcha/api.js'></script>	
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136379266-2"></script>
@@ -282,7 +283,8 @@
 								}
 							?>
 							<!-- reCAPTCHA -->
-							<div class="g-recaptcha" align="center" data-sitekey="<?php
+							<div class="g-recaptcha" align="center" 
+									data-callback="recaptchaCallback" data-sitekey="<?php
 																						require_once "captcha.php";
 																						echo getKey(1); //get the site key from DB
 																					?>
@@ -295,7 +297,7 @@
 								}
 							?>
 							<!-- Submit button -->
-							<input class="popUpButton" type="submit" value="Register"/>
+							<button id="signUpBtn" class="popUpButton" type="submit" disabled>Register</button>
 							<?php
 								if (isset($_SESSION['signUpError']) && (!isset($_SESSION['loggedIn']))) {
 									echo "<script>$(window).load(function(){
