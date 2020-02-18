@@ -78,40 +78,24 @@
 				</div>
 			</nav>	
 		</header>
-		<div class="container col-11 col-sm-9">		
-			<p class="text-center">
-				1. Are you looking for an freelancer or a job?
+		<div class="container col-11 col-sm-9">	
+			<p id="step" class="text-center">
+				Check how easy it is...
 			</p>
-			<div class="image col-md-10 rounded mx-auto d-block"> 
-				<img src="img/how-it-works1.jpg" alt="img">
+			<div class="boxes">
+				<div id="step1" class="box">
+					<img src="img/how-it-works1.jpg" alt="img">
+				</div>
+				<div id="step2" class="box">
+					<img src="img/how-it-works2.jpg" alt="img">
+				</div>
+				<div id="step3" class="box">
+					<img src="img/how-it-works3.jpg" alt="img">
+				</div>
+				<div id="step4" class="box">
+					<img src="img/how-it-works4.jpg" alt="img">
+				</div>
 			</div>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<p class="text-center">
-				2. First log in to your account or create one
-			</p>
-			<div class="image col-md-10 rounded mx-auto d-block"> 
-				<img src="img/how-it-works2.jpg" alt="img">
-			</div>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<p class="text-center">
-				3. Now you can easily post an announcement or find one
-			</p>
-			<div class="image col-md-10 rounded mx-auto d-block"> 
-				<img src="img/how-it-works3.jpg" alt="img">
-			</div>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<p class="text-center">
-				4. Wait for someone to answer or do it yourself
-			</p>
-			<div class="image col-md-10 rounded mx-auto d-block"> 
-				<img src="img/how-it-works4.jpg" alt="img">
-			</div>			
 		</div>
 		<!-- Log in modal -->
 		<div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="logInModalTitle" aria-hidden="true">
@@ -288,5 +272,6 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="how-it-works.js"></script>
 	</body>
 </html>

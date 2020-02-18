@@ -1,18 +1,43 @@
-.image img {
-    width: 100%;
-	height: auto;
-	border-radius: 15px 50px; 
-}
-
-.dot {
-  height: 2vw;
-  width: 2vw;
-  background-color: DodgerBlue;
-  border-radius: 50%;
-  display: block;
-  margin: 10px auto;
-}
-
 p {
 	font-size:5vw;
+  margin-bottom: 0;
+}
+
+@media(max-width:575px) {
+  p {
+          font-size:30px;
+  }
+}
+
+p#step {
+  padding-top: 30px;
+}
+
+.boxes {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 1%;
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover; 
+  transition: .5s;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
 }
