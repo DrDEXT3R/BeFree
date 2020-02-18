@@ -81,7 +81,7 @@
 			<h1 align="center" class="d-none d-md-block d-md-block animated slideInLeft slow">Are you looking for an <font>expert?</font>&emsp;Post an ad...</h1>			
 			<h1 align="center" class="d-none d-md-block animated slideInRight slow">Do you want to earn <font>money?</font>&emsp;Find work...</h1>
 			<h1 align="center" class="animated bounceInUp slow">Just <font>be free!</font></h1>
-			<div align="center" class="options col-sm-9 d-flex justify-content-between flex-column flex-md-row">
+			<div align="center" class="options col-sm-9 d-flex align-items-center justify-content-between flex-column flex-md-row">
 				<div class="option1">
 					<a href="freelancer.php">I want to WORK</a>
 				</div>	

@@ -64,6 +64,7 @@ h1 font {
 	font-family: 'Amatic SC', cursive;
 	font-weight: bold;
 	display: inline-block;
+	margin-top: 5px;
 }
 .option1 a, .option2 a {
 	color: white;
