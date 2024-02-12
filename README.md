@@ -1,8 +1,13 @@
 # BeFree
 BeFree is a website that will facilitate the work of freelancers. This portal will allow you to easily find an interesting project, with the right level of difficulty and the required technologies. All job announcements will be in one, easily accessible place. Thanks to this, the time needed to find a suitable and satisfactory project for a freelancer will be significantly shortened.
 
-## Getting Started
-The current version of the website can be seen here: http://befree.itlookssoeasy.com/
+## Demo
+### Home Page
+![Image](doc/image1.png) 
+### Job Offers
+![Image](doc/image2.png) 
+### Login and Signup
+![Image](doc/image3.png) 
 
 ## Built With
 * [HTML](https://html.spec.whatwg.org/multipage/) - The language for describing the structure of Web pages
