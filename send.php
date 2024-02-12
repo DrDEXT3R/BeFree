@@ -28,8 +28,8 @@
 			$connection->close();
 			
 			$subject = 'Message from BeFree website';
-			$headers = 'From: admin@befree.itlookssoeasy.com' . "\r\n" .
-					   'Reply-To: admin@befree.itlookssoeasy.com' . "\r\n" .
+			$headers = 'From: admin@befree-freelancing.com' . "\r\n" .
+					   'Reply-To: admin@befree-freelancing.com' . "\r\n" .
 					   'X-Mailer: PHP/' . phpversion();
 			
 			if( mail($recipient, $subject, $message, $headers) ) { //mail() doesn't work in local server

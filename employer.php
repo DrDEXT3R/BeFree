@@ -110,8 +110,8 @@
 									'Employer: ' . $employer . "\r\n" .
 									'E-mail: ' . $email . "\r\n" .
 									'Phone: ' . $phone . "\r\n";
-						$headers =	'From: admin@befree.itlookssoeasy.com' . "\r\n" .
-									'Reply-To: admin@befree.itlookssoeasy.com' . "\r\n" .
+						$headers =	'From: admin@befree-freelancing.com' . "\r\n" .
+									'Reply-To: admin@befree-freelancing.com' . "\r\n" .
 									'X-Mailer: PHP/' . phpversion();
 						mail($recipient, $subject, $message, $headers);		
 

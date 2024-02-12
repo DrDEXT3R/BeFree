@@ -122,8 +122,8 @@
 						$message = 	'Someone has created a new account!' . "\r\n\n" . 
 									'Login: ' . $login . "\r\n" .
 									'E-mail: ' . $email . "\r\n";
-						$headers =	'From: admin@befree.itlookssoeasy.com' . "\r\n" .
-									'Reply-To: admin@befree.itlookssoeasy.com' . "\r\n" .
+						$headers =	'From: admin@befree-freelancing.com' . "\r\n" .
+									'Reply-To: admin@befree-freelancing.com' . "\r\n" .
 									'X-Mailer: PHP/' . phpversion();
 						mail($recipient, $subject, $message, $headers);		
 

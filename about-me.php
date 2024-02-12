@@ -91,9 +91,6 @@
 						<div class="text-center">
 							<img src="img/github.png"> <a href="https://github.com/DrDEXT3R" target="_blank">Visit GitHub</a></br>
 						</div>	
-						<div class="text-center">
-							<img src="img/blog.png"> <a href="https://itlookssoeasy.com/" target="_blank">Visit Blog</a>&nbsp;&nbsp;&nbsp;</br>
-						</div>	
 					</div>					
 				</div>	
 				<div class="col-lg-9 align-self-center">
